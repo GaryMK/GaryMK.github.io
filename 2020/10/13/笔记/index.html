@@ -90,7 +90,7 @@ function activateLightMode(){
 <h5 id="表示层（UI）"><a href="#表示层（UI）" class="headerlink" title="表示层（UI）"></a>表示层（UI）</h5><p>主要是指与用户交互的界面。用于接收用户输入的数据和显示处理后用户需要的数据。</p>
 <h5 id="业务逻辑层（BLL）"><a href="#业务逻辑层（BLL）" class="headerlink" title="业务逻辑层（BLL）"></a>业务逻辑层（BLL）</h5><p>UI层和DAL层之间的桥梁。实现业务逻辑。业务逻辑具体包含：验证、计算、业务规则等等。</p>
 <h5 id="数据访问层（DAL）"><a href="#数据访问层（DAL）" class="headerlink" title="数据访问层（DAL）"></a>数据访问层（DAL）</h5><p>与数据库打交道。主要实现对数据的增、删、改、查。将存储在数据库中的数据提交给业务层，同时将业务层处理的数据保存到数据库。（当然这些操作都是基于UI层的。用户的需求反映给界面（UI），UI反映给BLL，BLL反映给DAL，DAL进行数据的操作，操作后再一一返回，直到将用户所需数据反馈给用户）</p>
-<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-4838-1359192395-1143.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="三层的联系" class="fancybox"><img alt="三层的联系" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-4838-1359192395-1143.png" class="lazyload" title="三层的联系"></a></p>
+<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-4838-1359192395-1143.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="三层的联系" class="fancybox"><img alt="三层的联系" title="三层的联系" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-4838-1359192395-1143.png" class="lazyload"></a></p>
 <blockquote>
 <p><strong>Entity(实体层)：</strong>它不属于三层中的任何一层，但是它是必不可少的一层。</p>
 <p><strong>Entity在三层架构中的作用：</strong></p>
@@ -104,10 +104,10 @@ function activateLightMode(){
 <p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-5080-1359192431-2064.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="三层及实体层之间的依赖关系" class="fancybox"><img alt="三层及实体层之间的依赖关系" title="三层及实体层之间的依赖关系" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-5080-1359192431-2064.png" class="lazyload"></a></p>
 <blockquote>
 <p><strong>两层</strong></p>
-<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-9082-1359192521-9117.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="两层" class="fancybox"><img alt="两层" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-9082-1359192521-9117.png" class="lazyload" title="两层"></a></p>
+<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-9082-1359192521-9117.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="两层" class="fancybox"><img alt="两层" title="两层" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-9082-1359192521-9117.png" class="lazyload"></a></p>
 <p>（当任何一个地方发生变化时，都需要重新开发整个系统。”多层”放在一层，分工不明确耦合度高——难以适应需求变化，可维护性低、可扩展性低）</p>
 <p><strong>三层</strong></p>
-<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-7503-1359192536-4828.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="img" class="fancybox"><img alt="img" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-7503-1359192536-4828.png" class="lazyload" title="img"></a></p>
+<p><a href="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-7503-1359192536-4828.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="img" class="fancybox"><img alt="img" title="img" data-src="https://www.runoob.com/wp-content/uploads/2018/08/1535337833-7503-1359192536-4828.png" class="lazyload"></a></p>
 <p>（发生在哪一层的变化，只需更改该层，不需要更改整个系统。层次清晰，分工明确，每层之间耦合度低——提高了效率，适应需求变化，可维护性高，可扩展性高）</p>
 </blockquote>
 <h5 id="三层架构的优势"><a href="#三层架构的优势" class="headerlink" title="三层架构的优势"></a>三层架构的优势</h5><ul>
