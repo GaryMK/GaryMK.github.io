@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>强化学习论文阅读(一) | Gary</title><meta name="description" content="强化学习论文阅读(一)"><meta name="author" content="Gary MK"><meta name="copyright" content="Gary MK"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/GaryMK.github.io/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="强化学习论文阅读(一)"><meta name="twitter:description" content="强化学习论文阅读(一)"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta property="og:type" content="article"><meta property="og:title" content="强化学习论文阅读(一)"><meta property="og:url" content="https://garymk.github.io/2020/10/28/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB(%E4%B8%80)/"><meta property="og:site_name" content="Gary"><meta property="og:description" content="强化学习论文阅读(一)"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/GaryMK.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://garymk.github.io/2020/10/28/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB(%E4%B8%80)/"><link rel="next" title="10月14日" href="https://garymk.github.io/2020/10/15/10%E6%9C%8814%E6%97%A5/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/GaryMK.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/GaryMK.github.io/">Gary</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/GaryMK.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/GaryMK.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/GaryMK.github.io/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/GaryMK.github.io/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/GaryMK.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/GaryMK.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/GaryMK.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#强化学习论文阅读（一）"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">强化学习论文阅读（一）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#GNN-RL"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">GNN + RL</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#Deep-Reinforcement-Learning-meets-Graph-Neural-Networks-An-optical-network-routing-use-case"><span class="toc_mobile_items-number">2.0.1.</span> <span class="toc_mobile_items-text">Deep Reinforcement Learning meets Graph Neural Networks: An optical network routing use case</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#摘要"><span class="toc_mobile_items-number">2.0.1.1.</span> <span class="toc_mobile_items-text">摘要</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#介绍"><span class="toc_mobile_items-number">2.0.1.2.</span> <span class="toc_mobile_items-text">介绍</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#背景"><span class="toc_mobile_items-number">2.0.1.3.</span> <span class="toc_mobile_items-text">背景</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#算法"><span class="toc_mobile_items-number">2.0.1.4.</span> <span class="toc_mobile_items-text">算法</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#环境"><span class="toc_mobile_items-number">2.0.1.5.</span> <span class="toc_mobile_items-text">环境</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#英语笔记"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">英语笔记</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#强化学习论文阅读（一）"><span class="toc-number">1.</span> <span class="toc-text">强化学习论文阅读（一）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GNN-RL"><span class="toc-number">2.</span> <span class="toc-text">GNN + RL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Deep-Reinforcement-Learning-meets-Graph-Neural-Networks-An-optical-network-routing-use-case"><span class="toc-number">2.0.1.</span> <span class="toc-text">Deep Reinforcement Learning meets Graph Neural Networks: An optical network routing use case</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#摘要"><span class="toc-number">2.0.1.1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#介绍"><span class="toc-number">2.0.1.2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-number">2.0.1.3.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法"><span class="toc-number">2.0.1.4.</span> <span class="toc-text">算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#环境"><span class="toc-number">2.0.1.5.</span> <span class="toc-text">环境</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#英语笔记"><span class="toc-number">2.1.</span> <span class="toc-text">英语笔记</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png)"><div id="post-info"><div id="post-title"><div class="posttitle">强化学习论文阅读(一)</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-10-28<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-10-29</time><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><html><head></head><body><h1 id="强化学习论文阅读（一）"><a href="#强化学习论文阅读（一）" class="headerlink" title="强化学习论文阅读（一）"></a>强化学习论文阅读（一）</h1><h1 id="GNN-RL"><a href="#GNN-RL" class="headerlink" title="GNN + RL"></a>GNN + RL</h1><h3 id="Deep-Reinforcement-Learning-meets-Graph-Neural-Networks-An-optical-network-routing-use-case"><a href="#Deep-Reinforcement-Learning-meets-Graph-Neural-Networks-An-optical-network-routing-use-case" class="headerlink" title="Deep Reinforcement Learning meets Graph Neural Networks: An optical network routing use case"></a>Deep Reinforcement Learning meets Graph Neural Networks: An optical network routing use case</h3><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>​    最近在深度强化学习(DRL)方面的进展显示了决策问题的显著改善。网络社区已经开始研究DRL如何为诸如路由之类的网络优化问题提供一种新的解决方案。然而，大多数最先进的基于DRL的网络技术不能推广，这意味着它们只能在训练期间看到的网络拓扑上运行，而不能在新的拓扑上运行。这一重要限制背后的原因是，<strong>现有的DRL网络解决方案使用标准的神经网络(例如，完全连接)，不能学习图形结构的信息。本文提出将图神经网络(GNN)与DRL相结合。</strong>GNN最近被提出用于图形建模，<strong>我们的新型DRL+GNN体系结构能够学习、操作和推广到任意网络拓扑。</strong>为了展示它的泛化能力，我们在光传输网络(OTN)场景中评估它，其中代理需要有效地分配流量需求。我们的结果表明，我们的DRL+GNN代理能够在训练期间未见的拓扑中取得优异的性能。</p>
+<blockquote>
+<p><strong>Optical Transport Network(OTN)</strong>：光传送网(OTN)是以<a href="https://www.maixj.net/ict/wdm-5266" target="_blank" rel="noopener">光的波分复用(WDM)技术</a>为基础、在光层组织网络的传送网。由于在网络上传送的IP业务和其他基于包传送数据业务的爆炸式的增长，对传输容量的要求在不断迅猛增加，密集波分复用(DWDM)技术和光放大器(OA)技术的成熟和应用使传送网正在向以光联网技术为基础的光传送网发展。</p>
+</blockquote>
+<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>现有的基于DRL的解决方案在应用于与网络相关的场景时仍然不能泛化。这妨碍了DRL代理在面对培训期间未见过的网络状态时做出正确决策的能力。</p>
+<p>这种强大的限制背后的主要原因是计算机网络基本上是用图形表示的。</p>
+<p>近年来，图神经网络(GNN)被提出用于对图进行建模和操作，以实现关系推理和组合推广。换句话说，GNN有助于学习图中实体之间的关系以及组成它们的规则。</p>
+<p>具体来说，DRL代理使用的GNN是受到消息传递神经网络[1]的启发。利用这个框架，我们设计了一个能够捕获网络拓扑上路径和链接之间关系的GNN</p>
+<blockquote>
+<p><strong>Message-passing Neural Networks</strong>: [1]Justin Gilmer, Samuel S Schoenholz, Patrick F Riley, Oriol Vinyals, and George E Dahl. 2017. Neural message passing for quantum chemistry. In <em>Proceedings of the 34th International Conference on Machine Learning-</em> <em>Volume 70</em>. JMLR. org, 1263–1272.</p>
+<p><strong>Bellman equation</strong>：</p>
+</blockquote>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>本文提出的解决方案结合了两种机器学习机制。首先，我们使用图神经网络(GNN)来建模计算机网络。其次，我们使用深度强化学习(DRL)来构建代理，学习如何有效地按照特定的优化目标运行网络。</p>
+<blockquote>
+<p>Message Passing Neural Networks (MPNN) are a well- known type of GNNs that use an iterative message-passing algorithm to propagate information between the nodes of the graph.</p>
+<p><a href="./image-20201028151452253.png" data-fancybox="group" data-caption="image-20201028151452253" class="fancybox"><img alt="image-20201028151452253" title="image-20201028151452253" data-src="./image-20201028151452253.png" class="lazyload"></a></p>
+<p><a href="./image-20201028151537097.png" data-fancybox="group" data-caption="image-20201028151537097" class="fancybox"><img alt="image-20201028151537097" title="image-20201028151537097" data-src="./image-20201028151537097.png" class="lazyload"></a></p>
+</blockquote>
+<blockquote>
+<p>Markov Decision Process (MDP) 马尔可夫模型</p>
+<p>Optical Add-Drop Multiplexer (ROADM) 光分插多路复用器</p>
+<p><a href="./image-20201028160631785.png" data-fancybox="group" data-caption="image-20201028160631785" class="fancybox"><img alt="image-20201028160631785" title="image-20201028160631785" data-src="./image-20201028160631785.png" class="lazyload"></a></p>
+<p>DQN algorithm: </p>
+<p>[1]  Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioan- nis Antonoglou, Daan Wierstra, and Martin Riedmiller. 2013. Playing atari with deep reinforcement learning. <em>arXiv preprint arXiv:1312.5602</em> (2013).</p>
+</blockquote>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>Our agent implements the DQN algorithm [<a href="#_bookmark21">14</a>], where the q-value function is modelled by a GNN.</p>
+<p><a href="./image-20201029161424259.png" data-fancybox="group" data-caption="image-20201029161424259" class="fancybox"><img alt="image-20201029161424259" title="image-20201029161424259" data-src="./image-20201029161424259.png" class="lazyload"></a></p>
+<h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><p>To simulate the environment, we implemented the <em>env.step()</em> and <em>env.reset_env()</em> functions in the Gym framework [<a href="#_bookmark10">4</a>].</p>
+<blockquote>
+<p>[1] Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba. 2016. OpenAI Gym. arXiv:arXiv:1606.01540</p>
+<p>hyperparameter: 超参数</p>
+</blockquote>
+<p>The optimizer used is a Stochastic Gradi- ent Descent [<a href="#_bookmark11">3</a>] method with Nesterov Momentum [<a href="#_bookmark30">23</a>].</p>
+<p> “Shortest Available Path” (SAP) policy</p>
+<p>RAND policy</p>
+<p> load balancing policy：负载均衡策略</p>
+<h2 id="英语笔记"><a href="#英语笔记" class="headerlink" title="英语笔记"></a>英语笔记</h2><p>decision-making problems: 决策问题</p>
+<p>the networking community: 网络社区</p>
+<p>state-of-the-art: adj. 最先进的；已经发展的；达到最高水准的</p>
+<p>automated control problems: 自动控制问题</p>
+<p>shogi：围棋</p>
+<p>self-driving networks: 无人驾驶的网络</p>
+<p>fully- connected, Convolutional Neural Networks: 全连接，卷积神经网络</p>
+<p>relational reasoning and combinatorial generalization: 关系推理和组合推广</p>
+<p>In Proceedings of: 在学报</p>
+<p>the generalization capabilities: 泛化能力</p>
+<p>tabula rasa:  白板（没有写字的书写板）；白纸状的心灵</p>
+<p>differentiable functions：可微函数</p>
+<p>pseudo-code：伪代码</p>
+<p>nested loops : 嵌套循环</p>
+<p> end-to-end：端到端</p>
+<p>ongoing work：正在进行的工作</p>
+<p>acknowledgments：致谢；鸣谢</p>
+</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Gary MK</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://garymk.github.io/2020/10/28/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB(%E4%B8%80)/">https://garymk.github.io/2020/10/28/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB(%E4%B8%80)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://garymk.github.io">Gary</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/GaryMK.github.io/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/GaryMK.github.io/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/GaryMK.github.io/2020/10/15/10%E6%9C%8814%E6%97%A5/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>10月14日</span></div></a></div></nav></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Gary MK</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/GaryMK.github.io/js/utils.js"></script><script src="/GaryMK.github.io/js/main.js"></script><script src="/GaryMK.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
