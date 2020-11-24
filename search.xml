@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Python</title>
+      <link href="2020/11/23/Python/"/>
+      <url>2020/11/23/Python/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="常用库"><a href="#常用库" class="headerlink" title="常用库"></a>常用库</h2><h3 id="Seaborn"><a href="#Seaborn" class="headerlink" title="Seaborn"></a>Seaborn</h3><p>Seaborn是基于matplotlib的图形可视化python包。它提供了一种高度交互式界面，便于用户能够做出各种有吸引力的统计图表。</p><p>Seaborn是在matplotlib的基础上进行了更高级的API封装，从而使得作图更加容易，在大多数情况下使用seaborn能做出很具有吸引力的图，而使用matplotlib就能制作具有更多特色的图。应该把Seaborn视为matplotlib的补充，而不是替代物。同时它能高度兼容numpy与pandas数据结构以及scipy与statsmodels等统计模式。</p><h3 id="print-f’-’"><a href="#print-f’-’" class="headerlink" title="print(f’***’)"></a>print(f’***’)</h3><p>python的print字符串前面加f表示格式化字符串，加f后可以在字符串里面使用用花括号括起来的变量和表达式，如果字符串里面没有表达式，那么前面加不加f输出应该都一样.</p><h3 id="loc和iloc函数"><a href="#loc和iloc函数" class="headerlink" title="loc和iloc函数"></a>loc和iloc函数</h3><h3 id="ipython"><a href="#ipython" class="headerlink" title="ipython"></a><strong>ipython</strong></h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>11月16日</title>
+      <link href="2020/11/16/11%E6%9C%8816%E6%97%A5/"/>
+      <url>2020/11/16/11%E6%9C%8816%E6%97%A5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="11月16日"><a href="#11月16日" class="headerlink" title="11月16日"></a>11月16日</h1><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h3><p>探索性数据分析（Exploratory Data Analysis，简称EDA），摘抄网上的一个中文解释，是指对已有的数据（特别是调查或观察得来的原始数据）在尽量少的先验假定下进行探索，通过作图、制表、方程拟合、计算特征量等手段探索数据的结构和规律的一种数据分析方法。特别是党我们对面对大数据时代到来的时候，各种杂乱的“脏数据”，往往不知所措，不知道从哪里开始了解目前拿到手上的数据时候，探索性数据分析就非常有效。探索性数据分析是上世纪六十年代提出，其方法有美国统计学家John Tukey提出的。</p><h3 id="Pearson-correlation-coefficient"><a href="#Pearson-correlation-coefficient" class="headerlink" title="Pearson correlation coefficient"></a>Pearson correlation coefficient</h3><p>在统计学中，<strong>皮尔逊相关系数</strong>( Pearson correlation coefficient），又称<strong>皮尔逊积矩相关系数</strong>（Pearson product-moment correlation coefficient，简称 <strong>PPMCC</strong>或<strong>PCCs</strong>），是用于度量两个变量X和Y之间的相关（线性相关），其值介于-1与1之间。</p><h3 id="Jupyter中的感叹号与问好"><a href="#Jupyter中的感叹号与问好" class="headerlink" title="Jupyter中的感叹号与问好"></a>Jupyter中的感叹号与问好</h3><p>感叹号！用于执行来自操作系统的命令；</p><p>问题？标记用于提供笔记本内帮助：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> df.fillna？ </span><br><span class="line">＃结果：</span><br><span class="line"> </span><br><span class="line">签名：df.fillna（value = <span class="literal">None</span>，method = <span class="literal">None</span>，axis = <span class="literal">None</span>，inplace = <span class="literal">False</span>，limit = <span class="literal">None</span>，downcast = <span class="literal">None</span>，** kwargs）</span><br><span class="line">文档字符串：</span><br><span class="line">使用指定方法填充NA / NaN值</span><br></pre></td></tr></table></figure><h3 id="SLAM"><a href="#SLAM" class="headerlink" title="SLAM"></a>SLAM</h3><p>提角点</p><p>RGBD点云</p><h3 id="光栅化"><a href="#光栅化" class="headerlink" title="光栅化"></a>光栅化</h3><p>光栅化是将几何数据经过一系列变换后最终转换为像素，从而呈现在显示设备上的过程，如下图：<img src="./20130819125657765" alt="img"></p><p>光栅化的本质是坐标变换、几何离散化，如下图:</p><p><img src="./20130819125727703" alt="img"></p><h2 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h2><p>bowl-shaped: 碗型</p><p>step through：单步调试；逐句通过</p><p>tabular data：列表数据</p><p>left out：忽视，不考虑；被遗忘</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11月9日</title>
       <link href="2020/11/09/11%E6%9C%889%E6%97%A5/"/>
       <url>2020/11/09/11%E6%9C%889%E6%97%A5/</url>
