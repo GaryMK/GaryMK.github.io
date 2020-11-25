@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>11月25日</title>
+      <link href="2020/11/25/11%E6%9C%8825%E6%97%A5/"/>
+      <url>2020/11/25/11%E6%9C%8825%E6%97%A5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="11月25日"><a href="#11月25日" class="headerlink" title="11月25日"></a>11月25日</h1><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>在现实世界中，我们每个人都需要预测。想要深入分析未来、思考是否买股票、政策给自己带来哪些机遇、提出新产品构想，或者只是计划一周的饭菜。</p><p>贝叶斯定理就是为了解决这些问题而诞生的，它可以根据过去的数据来预测出未来事情发生概率。</p><p>贝叶斯定理的思考方式为我们提供了有效的方法来帮助我们做决策，以便更好地预测未来的商业、金融、以及日常生活。</p><h4 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h4><p><img src="./640" alt="img"></p><h4 id="应用案例"><a href="#应用案例" class="headerlink" title="应用案例"></a>应用案例</h4><ol><li>全概率公式</li></ol><p>这个公式的作用是计算贝叶斯定理中的P(B)。</p><p>全概率公式：</p><p><img src="./640" alt="img"></p><ol start="2"><li>贝叶斯定理在做判断上的应用</li><li>贝叶斯定理在医疗行业的应用</li><li>贝叶斯垃圾邮件过滤器</li></ol><h3 id="LiDAR"><a href="#LiDAR" class="headerlink" title="LiDAR"></a>LiDAR</h3><p>LiDAR (Light Detection and Ranging) is a method used to generate accurate 3D representations of the surroundings, and it uses laser light to achieve this. Basically, the 3D target is illuminated with a laser light (a focused, directed beam of light) and the reflected light is collected by sensors. The time required for the light to reflect back to the sensor is calculated.</p><p><strong>Different sensors collect light from different parts of the object, and the times recorded by the sensors would be different. This difference in time calculated by the sensors can be used to calculate the depth of the object. This depth information combined with the 2D represenation of the image provides an accurate 3D representation of the object. This process is similar to actual human vision. Two eyes make observations in 2D and these two pieces of information are combined to form a 3D map (depth perception). This is how humans sense the world around us</strong>.</p><p>This technology is used to create 3D representations in many real world scenarios. For example, it is used in farms to help sow seeds and remove weeds. A moving robot uses LiDAR to to create a 3D map of its surroundings and using this map, it avoids obstacles and completes its tasks. This technology is also used in archaeology. LiDAR is used to create 3D renderings of 2D scans of artifacts. This gives an accurate idea of the 3D shape of the artifact when the artifact cannot be excavated for whatever reason. Finally, LiDAR can also be used to render high quality 3D maps of ocean floors and other inaccesible terrains, making it very useful to geologists and oceanographers. Below is a 3D map of an ocean floor generated using LiDAR:</p><p><img src="./yG3CewG.jpg" alt="img"></p><h3 id="Flash-LiDAR-Camera"><a href="#Flash-LiDAR-Camera" class="headerlink" title="Flash LiDAR Camera"></a>Flash LiDAR Camera</h3><p><img src="./C3zUR7X.jpg" alt="img"></p><h3 id="RPN"><a href="#RPN" class="headerlink" title="RPN"></a>RPN</h3><h2 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h2><p>defer to：尊重；听从</p><p>representation：表达式</p><p>1 over m： 1/m</p><p>superimpose：添加；重叠；附加；安装</p><p>nested list structure: 嵌套列表</p><p>address the issue: 解决问题</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python</title>
       <link href="2020/11/23/Python/"/>
       <url>2020/11/23/Python/</url>
