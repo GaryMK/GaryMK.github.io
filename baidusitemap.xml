@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://garymk.gitee.io/2020/12/08/hello-world/</loc>
+    <lastmod>2020-12-08</lastmod>
+  </url>
+  <url>
+    <loc>https://garymk.gitee.io/2020/12/02/12%E6%9C%881%E6%97%A5/</loc>
+    <lastmod>2020-12-02</lastmod>
+  </url>
+  <url>
     <loc>https://garymk.gitee.io/2020/11/25/11%E6%9C%8825%E6%97%A5/</loc>
     <lastmod>2020-11-25</lastmod>
   </url>
@@ -43,9 +51,5 @@
   <url>
     <loc>https://garymk.gitee.io/2020/10/13/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%96%87%E6%A1%A3%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2020-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://garymk.gitee.io/2019/12/26/hello-world/</loc>
-    <lastmod>2019-12-26</lastmod>
   </url>
 </urlset> 
