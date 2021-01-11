@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://garymk.gitee.io/2021/01/09/1%E6%9C%889%E6%97%A5/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://garymk.gitee.io/2021/01/01/3D-Object-Detect/</loc>
     
     <lastmod>2021-01-01</lastmod>
@@ -193,7 +200,7 @@
 
   <url>
     <loc>https://garymk.gitee.io/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,14 +208,14 @@
   
   <url>
     <loc>https://garymk.gitee.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -217,42 +224,42 @@
   
   <url>
     <loc>https://garymk.gitee.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/categories/Computer-Vision/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/categories/Git/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/categories/Python/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://garymk.gitee.io/categories/%E6%9C%AF%E8%AF%AD/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
