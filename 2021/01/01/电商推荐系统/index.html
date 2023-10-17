@@ -1,0 +1,613 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>电商推荐系统 | GaryMK</title><meta name="author" content="Gary MK,760246545@qq.com"><meta name="copyright" content="Gary MK"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="电商推荐系统涉及的框架以及算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电商推荐系统">
+<meta property="og:url" content="https://garymk.cn/2021/01/01/%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="GaryMK">
+<meta property="og:description" content="电商推荐系统涉及的框架以及算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2021-01-01T03:08:56.000Z">
+<meta property="article:modified_time" content="2021-01-01T03:08:56.000Z">
+<meta property="article:author" content="Gary MK">
+<meta property="article:tag" content="推荐系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://garymk.cn/2021/01/01/%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><meta name="google-site-verification" content="HEHvITU5ivSY_I-Y28VZuf7PUipzf-qPR7w9Uz1csDA"/><meta name="baidu-site-verification" content="codeva-f6yev5EHVP"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1d3a6cf1a7d8ae018523cb3684a27486";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-5G6KHDXYS9"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5G6KHDXYS9');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":1000,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Gary MK","link":"链接: ","source":"来源: GaryMK","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '电商推荐系统',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-01-01 11:08:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="GaryMK" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM40NV46MrdfnryFg6EIMAlt8uO7tfbtbs6XH9W2Z1Opfw/0" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog-info"><a href="/" title="GaryMK"><span class="site-name">GaryMK</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">电商推荐系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-01T03:08:56.000Z" title="发表于 2021-01-01 11:08:56">2021-01-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-01T03:08:56.000Z" title="更新于 2021-01-01 11:08:56">2021-01-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>32分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="电商推荐系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="waline-pageview-count" data-path="/2021/01/01/%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="电商推荐系统"><a href="#电商推荐系统" class="headerlink" title="电商推荐系统"></a>电商推荐系统</h1><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p>文档数据库</p>
+<h3 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h3><p>Scala是一门多范式的编程语言，一种类似<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/java/85979">java</a>的编程语言，设计初衷是实现可伸缩的语言、并集成<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B">面向对象编程</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">函数式编程</a>的各种特性。</p>
+<h3 id="UGC"><a href="#UGC" class="headerlink" title="UGC"></a>UGC</h3><p>UGC 互联网术语，全称为User Generated Content，也就是<strong>用户生成内容，即用户原创内容</strong>。UGC的概念最早起源于互联网领域，即用户将自己原创的内容通过互联网平台进行展示或者提供给其他用户。UGC是伴随着以提倡个性化为主要特点的Web2.0<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%A6%82%E5%BF%B5">概念</a>而兴起的，也可叫做<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/UCC/6493785">UCC</a>（User-created Content）。它并不是某一种具体的业务，而是一种用户使用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BA%92%E8%81%94%E7%BD%91/199186">互联网</a>的新方式，即由原来的以下载为主变成下载和上传并重。</p>
+<p>随着互联网运用的发展，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C/143243">网络</a>用户的交互作用得以体现，用户既是网络内容的浏览者，也是网络内容的创造者。</p>
+<h3 id="UDF"><a href="#UDF" class="headerlink" title="UDF"></a>UDF</h3><p>UDF（User-Defined Functions）即是用户定义的hive函数。hive自带的函数并不能完全满足业务需求，这时就需要我们自定义函数了</p>
+<h3 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h3><p>Spark是一种快速、通用、可扩展的大数据分析引擎，2009年诞生于加州大学伯克利分校AMPLab，2010年开源，2013年6月成为Apache孵化项目，2014年2月成为Apache顶级项目。目前，Spark生态系统已经发展成为一个包含多个子项目的集合，其中包含<strong>SparkSQL、Spark Streaming、GraphX、MLlib</strong>等子项目，Spark是基于内存计算的大数据并行计算框架。<strong>Spark基于内存计算</strong>，提高了在大数据环境下数据处理的实时性，同时保证了高容错性和高可伸缩性，允许用户将Spark部署在大量廉价硬件之上，形成集群。Spark得到了众多大数据公司的支持，这些公司包括Hortonworks、IBM、Intel、Cloudera、MapR、Pivotal、百度、阿里、腾讯、京东、携程、优酷土豆。当前百度的Spark已应用于凤巢、大搜索、直达号、百度大数据等业务；阿里利用GraphX构建了大规模的图计算和图挖掘系统，实现了很多生产系统的推荐算法；腾讯Spark集群达到8000台的规模，是当前已知的世界上最大的Spark集群。</p>
+<h4 id="为什么要学习Spark？"><a href="#为什么要学习Spark？" class="headerlink" title="为什么要学习Spark？"></a>为什么要学习Spark？</h4><h5 id="Hadoop的MapReduce计算模型存在的问题："><a href="#Hadoop的MapReduce计算模型存在的问题：" class="headerlink" title="Hadoop的MapReduce计算模型存在的问题："></a>Hadoop的MapReduce计算模型存在的问题：</h5><p>学习过Hadoop的MapReduce的学员都知道，MapReduce的核心是Shuffle（洗牌）。在整个Shuffle的过程中，至少会产生6次的I&#x2F;O。下图是我们在讲MapReduce的时候，画的Shuffle的过程。</p>
+<p>中间结果输出：基于MapReduce的计算引擎通常会将中间结果输出到磁盘上，进行存储和容错。另外，当一些查询（如：Hive）翻译到MapReduce任务时，往往会产生多个Stage（阶段），而这些串联的Stage又依赖于底层文件系统（如HDFS）来存储每一个Stage的输出结果，而I&#x2F;O的效率往往较低，从而影响了MapReduce的运行速度。<img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083658261-227282946.png" alt="img"></p>
+<h5 id="Spark的最大特点：基于内存"><a href="#Spark的最大特点：基于内存" class="headerlink" title="Spark的最大特点：基于内存"></a>Spark的最大特点：基于内存</h5><p>Spark是MapReduce的替代方案，而且兼容HDFS、Hive，可融入Hadoop的生态系统，以弥补MapReduce的不足。</p>
+<h4 id="Spark的特点：快、易用、通用、兼容性"><a href="#Spark的特点：快、易用、通用、兼容性" class="headerlink" title="Spark的特点：快、易用、通用、兼容性"></a>Spark的特点：快、易用、通用、兼容性</h4><h5 id="快"><a href="#快" class="headerlink" title="快"></a>快</h5><p>与Hadoop的MapReduce相比，Spark基于内存的运算速度要快100倍以上，即使，Spark基于硬盘的运算也要快10倍。Spark实现了高效的DAG执行引擎，从而可以通过内存来高效处理数据流。<br><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083458424-1114607121.png" alt="img"> </p>
+<h5 id="易用"><a href="#易用" class="headerlink" title="易用"></a>易用</h5><p>Spark支持Java、Python和Scala的API，还支持超过80种高级算法，使用户可以快速构建不同的应用。而且Spark支持交互式的Python和Scala的shell，可以非常方便地在这些shell中使用Spark集群来验证解决问题的方法。<br><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083543529-1547062484.png" alt="img"><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083554814-248989191.png" alt="img"></p>
+<h5 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h5><p>Spark提供了统一的解决方案。Spark可以用于<strong>批处理</strong>、交互式查询（<strong>Spark SQL</strong>）、实时流处理（<strong>Spark Streaming</strong>）、机器学习（<strong>Spark MLlib</strong>）和图计算（<strong>GraphX</strong>）。这些不同类型的处理都可以在同一个应用中无缝使用。Spark统一的解决方案非常具有吸引力，毕竟任何公司都想用统一的平台去处理遇到的问题，减少开发和维护的人力成本和部署平台的物力成本。</p>
+<p>另外Spark还可以很好的融入Hadoop的体系结构中可以直接操作HDFS，并提供Hive on Spark、Pig on Spark的框架集成Hadoop。<br><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083800247-1305213116.png" alt="img"></p>
+<h5 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h5><p>Spark可以非常方便地与其他的开源产品进行融合。比如，Spark可以使用Hadoop的YARN和Apache Mesos作为它的资源管理和调度器，器，并且可以处理所有Hadoop支持的数据，包括HDFS、HBase和Cassandra等。这对于已经部署Hadoop集群的用户特别重要，因为不需要做任何数据迁移就可以使用Spark的强大处理能力。Spark也可以不依赖于第三方的资源管理和调度器，它实现了Standalone作为其内置的资源管理和调度框架，这样进一步降低了Spark的使用门槛，使得所有人都可以非常容易地部署和使用Spark。此外，Spark还提供了在EC2上部署Standalone的Spark集群的工具。<br><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1367933-20181024083830119-1645632631.png" alt="img"></p>
+<h3 id="Spark-Core"><a href="#Spark-Core" class="headerlink" title="Spark Core"></a>Spark Core</h3><h4 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h4><p>Spark Core提供Spark最基础与最核心的功能，主要包括以下功能：</p>
+<p>(1)  SparkContext：通常而言，Driver Application的执行与输出都是通过SparkContext来完成的。在正式提交Application之前，首先需要初始化SparkContext。SparkContext隐藏了网络通信、分布式部署、消息通信、存储能力、计算能力、缓存、测量系统、文件服务、Web服务等内容，应用程序开发者只需要使用SparkContext提供的API完成功能开发。SparkContext内置的DAGScheduler负责创建Job，将DAG中的RDD划分到不同的Stage，提交Stage等功能。内置的TaskScheduler负责资源的申请，任务的提交及请求集群对任务的调度等工作。<br>(2)  存储体系：<strong>Spark优先考虑使用各节点的内存作为存储，当内存不足时才会考虑使用磁盘</strong>，这极大地减少了磁盘IO，提升了任务执行的效率，使得Spark适用于实时计算、流式计算等场景。此外，Spark还提供了以内存为中心的高容错的分布式文件系统Tachyon供用户进行选择。Tachyon能够为Spark提供可靠的内存级的文件共享服务。<br>(3)  计算引擎：计算引擎由SparkContext中的DAGScheduler、RDD以及具体节点上的Executor负责执行的Map和Reduce任务组成。DAGScheduler和RDD虽然位于SparkContext内部，但是在任务正式提交与执行之前会将Job中的RDD组织成有向无环图（DAG），并对Stage进行划分，决定了任务执行阶段任务的数量、迭代计算、shuffle等过程。<br>(4)  部署模式：由于单节点不足以提供足够的存储和计算能力，所以作为大数据处理的Spark在SparkContext的TaskScheduler组件中提供了对Standalone部署模式的实现和Yarn、Mesos等分布式资源管理系统的支持。通过使用Standalone、Yarn、Mesos等部署模式为Task分配计算资源，提高任务的并发执行效率。</p>
+<h4 id="Spark-Core子框架"><a href="#Spark-Core子框架" class="headerlink" title="Spark Core子框架"></a>Spark Core子框架</h4><p>Spark的几大子框架包括：</p>
+<p>(1)、Spark SQL：首先使用SQL语句解析器（SqlParser）将SQL转换为语法树（Tree），并且使用规则执行器（RuleExecutor）将一系列规则（Rule）应用到语法树，最终生成物理执行计划并执行。其中，规则执行器包括语法分析器（Analyzer）和优化器（Optimizer）。<br>(2)、Spark Streaming：用于流式计算。Spark Streaming支持Kafka、Flume、Twitter、MQTT、ZeroMQ、Kinesis和简单的TCP套接字等多种数据输入源。输入流接收器（Receiver）负责接入数据，是接入数据流的接口规范。Dstream是Spark Streaming中所有数据流的抽象，Dstream可以被组织为Dstream Graph。Dstream本质上由一系列连续的RDD组成。<br>(3)、GraphX：Spark提供的分布式图计算框架。GraphX主要遵循整体同步并行（bulk Synchronous parallel，BSP）计算模式下的Pregel模型实现。GraphX提供了对图的抽象Graph，Graph由顶点（Vertex），边（Edge）及继承了Edge的EdgeTriplet三种结构组成。GraphX目前已经封装了最短路径，网页排名，连接组件，三角关系统计等算法的实现，用户可以选择使用。<br>(4)、MLlib：Spark提供的机器学习框架。机器学习是一门设计概率论、统计学、逼近论、凸分析、算法复杂度理论等多领域的交叉学科。MLlib目前已经提供了基础统计、分析、回归、决策树、随机森林、朴素贝叶斯、保序回归、协同过滤、聚类、维数缩减、特征提取与转型、频繁模式挖掘、预言模型标记语言、管道等多种数理统计、概率论、数据挖掘方面的数学算法。</p>
+<h4 id="Spark架构"><a href="#Spark架构" class="headerlink" title="Spark架构"></a>Spark架构</h4><blockquote>
+<p>Spark采用了分布式计算中的Master-Slave模型。Master作为整个集群的控制器，负责整个集群的正常运行；Worker是计算节点，接受主节点命令以及进行状态汇报；Executor负责任务（Tast）的调度和执行；Client作为用户的客户端负责提交应用；Driver负责控制一个应用的执行。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116172542912" alt="这里写图片描述"></p>
+<blockquote>
+<p>Spark集群启动时，需要从主节点和从节点分别启动Master进程和Worker进程，对整个集群进行控制。在一个Spark应用的执行过程中，Driver是应用的逻辑执行起点，运行Application的main函数并创建SparkContext，DAGScheduler把对Job中的RDD有向无环图根据依赖关系划分为多个Stage，每一个Stage是一个TaskSet， TaskScheduler把Task分发给Worker中的Executor；Worker启动Executor，Executor启动线程池用于执行Task。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116172611353" alt="这里写图片描述"></p>
+<h4 id="Spark计算模型"><a href="#Spark计算模型" class="headerlink" title="Spark计算模型"></a>Spark计算模型</h4><blockquote>
+<p>RDD：弹性分布式数据集，是一种<strong>内存抽象</strong>，可以理解为一个大数组，数组的元素是RDD的分区Partition，分布在集群上；在物理数据存储上，RDD的每一个Partition对应的就是一个数据块Block，<strong>Block可以存储在内存中，当内存不够时可以存储在磁盘上。</strong></p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116172839701" alt="这里写图片描述"><br><strong>RDD逻辑物理结构</strong></p>
+<p>Hadoop将Mapreduce计算的结果写入磁盘，在机器学习、图计算、PageRank等迭代计算下，重用中间结果导致的反复I&#x2F;O耗时过长，成为了计算性能的瓶颈。为了提高迭代计算的性能和分布式并行计算下共享数据的容错性，伯克利的设计者依据两个特性而设计了RDD:</p>
+<p>1、数据集分区存储在节点的内存中，减少迭代过程（如机器学习算法）反复的I&#x2F;O操作从而提高性能。<br>2、数据集不可变，并记录其转换过程，从而实现无共享数据读写同步问题、以及出错的可重算性。</p>
+<p><strong>Operations：算子</strong></p>
+<blockquote>
+<p>算子是RDD中定义的函数，可以对RDD中的数据进行转换和操作。如下图，Spark从外部空间（HDFS）读取数据形成RDD_0，Tranformation算子对数据进行操作（如fliter）并转化为新的RDD_1、RDD_2，通过Action算子（如collect&#x2F;count）触发Spark提交作业。</p>
+<p>如上的分析过程可以看出，Tranformation算子并不会触发Spark提交作业，直至Action算子才提交作业，这是一个延迟计算的设计技巧，可以避免内存过快被中间计算占满，从而提高内存的利用率。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116173006041" alt="这里写图片描述"></p>
+<blockquote>
+<p>下图是算子的列表，分三大类：Value数据类型的Tranformation算子；Key-Value数据类型的Tranformation算子；Action算子。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116173059020" alt="这里写图片描述"></p>
+<p><strong>Lineage Graph：血统关系图</strong></p>
+<blockquote>
+<p>下图的第一阶段生成RDD的有向无环图，即是血统关系图，记录了RDD的更新过程，当这个RDD的部分分区数据丢失时，它可以通过Lineage获取足够的信息来重新运算和恢复丢失的数据分区。DAGScheduler依据RDD的依赖关系将有向无环图划分为多个Stage，一个Stage对应着一系列的Task，由TashScheduler分发给Worker计算。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180116173117901" alt="这里写图片描述"></p>
+<h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><blockquote>
+<p>spark生态系统中，Spark Core，包括各种Spark的各种核心组件，它们能够对内存和硬盘进行操作，或者调用CPU进行计算。<br>spark core定义了RDD、DataFrame和DataSet</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180117085511437" alt="这里写图片描述"></p>
+<blockquote>
+<p>spark最初只有RDD，DataFrame在Spark 1.3中被首次发布，DataSet在Spark1.6版本中被加入。</p>
+</blockquote>
+<h5 id="RDD"><a href="#RDD" class="headerlink" title="RDD"></a>RDD</h5><blockquote>
+<p>RDD：Spark的核心概念是RDD (resilient distributed dataset)，指的是一个只读的，可分区的分布式数据集，这个数据集的全部或部分可以缓存在内存中，在多次计算间重用。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import org.apache.spark.sql.SQLContext</span><br><span class="line">import org.apache.spark.&#123;SparkConf, SparkContext&#125;</span><br><span class="line"> </span><br><span class="line">object Run &#123;</span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;test&quot;).setMaster(&quot;local&quot;)</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line">    sc.setLogLevel(&quot;WARN&quot;)</span><br><span class="line">    val sqlContext = new SQLContext(sc)</span><br><span class="line"> </span><br><span class="line">    /**</span><br><span class="line">      * id      age</span><br><span class="line">      * 1       30</span><br><span class="line">      * 2       29</span><br><span class="line">      * 3       21</span><br><span class="line">      */</span><br><span class="line">    case class Person(id: Int, age: Int)</span><br><span class="line">    val idAgeRDDPerson = sc.parallelize(Array(Person(1, 30), Person(2, 29), Person(3, 21)))</span><br><span class="line"> </span><br><span class="line">    // 优点1</span><br><span class="line">    // idAge.filter(_.age &gt; &quot;&quot;) // 编译时报错, int不能跟String比</span><br><span class="line"> </span><br><span class="line">    // 优点2</span><br><span class="line">    idAgeRDDPerson.filter(_.age &gt; 25) // 直接操作一个个的person对象</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">1234567891011121314151617181920212223242526</span><br></pre></td></tr></table></figure>
+
+<h5 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h5><blockquote>
+<p>在Spark中，DataFrame是一种以RDD为基础的分布式数据集，类似于传统数据库中的二维表格。DataFrame与RDD的主要区别在于，前者带有schema元信息，即DataFrame所表示的二维表数据集的每一列都带有名称和类型。这使得Spark SQL得以洞察更多的结构信息，从而对藏于DataFrame背后的数据源以及作用于DataFrame之上的变换进行了针对性的优化，最终达到大幅提升运行时效率的目标。反观RDD，由于无从得知所存数据元素的具体内部结构，Spark Core只能在stage层面进行简单、通用的流水线优化。</p>
+</blockquote>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180117085747723" alt="这里写图片描述"></p>
+<blockquote>
+<p>DataFrame引入了schema和off-heap</p>
+<p>schema : RDD每一行的数据, 结构都是一样的.<br>这个结构就存储在schema中。 Spark通过schame就能够读懂数据， 因此在通信和IO时就只需要序列化和反序列化数据，而结构的部分就可以省略了。 off-heap : 意味着JVM堆以外的内存，这些内存直接受操作系统管理（而不是JVM）。Spark能够以二进制的形式序列化数据(不包括结构)到off-heap中，当要操作数据时，就直接操作off-heap内存。由于Spark理解schema，所以知道该如何操作。</p>
+<p>off-heap就像地盘，schema就像地图， Spark有地图又有自己地盘了， 就可以自己说了算了， 不再受JVM的限制，也就不再收GC的困扰了。通过schema和off-heap，DataFrame解决了RDD的缺点，但是却丢了RDD的优点。 DataFrame不是类型安全的， API也不是面向对象风格的。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import org.apache.spark.sql.types.&#123;DataTypes, StructField, StructType&#125;</span><br><span class="line">import org.apache.spark.sql.&#123;Row, SQLContext&#125;</span><br><span class="line">import org.apache.spark.&#123;SparkConf, SparkContext&#125;</span><br><span class="line"> </span><br><span class="line">object Run &#123;</span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;test&quot;).setMaster(&quot;local&quot;)</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line">    sc.setLogLevel(&quot;WARN&quot;)</span><br><span class="line">    val sqlContext = new SQLContext(sc)</span><br><span class="line">    /**</span><br><span class="line">      * id      age</span><br><span class="line">      * 1       30</span><br><span class="line">      * 2       29</span><br><span class="line">      * 3       21</span><br><span class="line">      */</span><br><span class="line">    val idAgeRDDRow = sc.parallelize(Array(Row(1, 30), Row(2, 29), Row(4, 21)))</span><br><span class="line"> </span><br><span class="line">    val schema = StructType(Array(StructField(&quot;id&quot;, DataTypes.IntegerType), StructField(&quot;age&quot;, DataTypes.IntegerType)))</span><br><span class="line"> </span><br><span class="line">    val idAgeDF = sqlContext.createDataFrame(idAgeRDDRow, schema)</span><br><span class="line">    // API不是面向对象的</span><br><span class="line">    idAgeDF.filter(idAgeDF.col(&quot;age&quot;) &gt; 25) </span><br><span class="line">    // 不会报错, DataFrame不是编译时类型安全的</span><br><span class="line">    idAgeDF.filter(idAgeDF.col(&quot;age&quot;) &gt; &quot;&quot;) </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">123456789101112131415161718192021222324252627</span><br></pre></td></tr></table></figure>
+
+<h5 id="DataSet"><a href="#DataSet" class="headerlink" title="DataSet"></a>DataSet</h5><blockquote>
+<p>Dataset是一个强类型的特定领域的对象，这种对象可以函数式或者关系操作并行地转换。每个Dataset也有一个被称为一个DataFrame的类型化视图，这种DataFrame是Row类型的Dataset，即Dataset[Row]</p>
+<p>Dataset是“懒惰”的，只在执行行动操作时触发计算。本质上，数据集表示一个逻辑计划，该计划描述了产生数据所需的计算。当执行行动操作时，Spark的查询优化程序优化逻辑计划，并生成一个高效的并行和分布式物理计划。</p>
+<p>DataSet结合了RDD和DataFrame的优点,，并带来的一个新的概念Encoder 当序列化数据时，Encoder产生字节码与off-heap进行交互，能够达到按需访问数据的效果， 而不用反序列化整个对象。 Spark还没有提供自定义Encoder的API，但是未来会加入。</p>
+</blockquote>
+<p>下面看DataFrame和DataSet在2.0.0-preview中的实现</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">下面这段代码, 在1.6.x中创建的是DataFrame</span><br><span class="line">// 上文DataFrame示例中提取出来的</span><br><span class="line">val idAgeRDDRow = sc.parallelize(Array(Row(1, 30), Row(2, 29), Row(4, 21)))</span><br><span class="line"> </span><br><span class="line">val schema = StructType(Array(StructField(&quot;id&quot;, DataTypes.IntegerType), StructField(&quot;age&quot;, DataTypes.IntegerType)))</span><br><span class="line"> </span><br><span class="line">val idAgeDF = sqlContext.createDataFrame(idAgeRDDRow, schema)</span><br><span class="line">1234567</span><br><span class="line">但是同样的代码在2.0.0-preview中, 创建的虽然还叫DataFrame</span><br><span class="line"></span><br><span class="line">// sqlContext.createDataFrame(idAgeRDDRow, schema) 方法的实现, 返回值依然是DataFrame</span><br><span class="line">def createDataFrame(rowRDD: RDD[Row], schema: StructType): DataFrame = &#123;</span><br><span class="line">sparkSession.createDataFrame(rowRDD, schema)</span><br><span class="line">&#125;</span><br><span class="line">123456</span><br><span class="line">但是其实却是DataSet, 因为DataFrame被声明为Dataset[Row]</span><br><span class="line"></span><br><span class="line">package object sql &#123;</span><br><span class="line">  // ...省略了不相关的代码</span><br><span class="line"> </span><br><span class="line">  type DataFrame = Dataset[Row]</span><br><span class="line">&#125;</span><br><span class="line">1234567</span><br><span class="line">因此当我们从1.6.x迁移到2.0.0的时候, 无需任何修改就直接用上了DataSet.</span><br><span class="line"></span><br><span class="line">下面是一段DataSet的示例代码</span><br><span class="line"></span><br><span class="line">import org.apache.spark.sql.types.&#123;DataTypes, StructField, StructType&#125;</span><br><span class="line">import org.apache.spark.sql.&#123;Row, SQLContext&#125;</span><br><span class="line">import org.apache.spark.&#123;SparkConf, SparkContext&#125;</span><br><span class="line"> </span><br><span class="line">object Test &#123;</span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;test&quot;).setMaster(&quot;local&quot;) // 调试的时候一定不要用local[*]</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line">    val sqlContext = new SQLContext(sc)</span><br><span class="line">    import sqlContext.implicits._</span><br><span class="line"> </span><br><span class="line">    val idAgeRDDRow = sc.parallelize(Array(Row(1, 30), Row(2, 29), Row(4, 21)))</span><br><span class="line"> </span><br><span class="line">    val schema = StructType(Array(StructField(&quot;id&quot;, DataTypes.IntegerType), StructField(&quot;age&quot;, DataTypes.IntegerType)))</span><br><span class="line"> </span><br><span class="line">    // 在2.0.0-preview中这行代码创建出的DataFrame, 其实是DataSet[Row]</span><br><span class="line">    val idAgeDS = sqlContext.createDataFrame(idAgeRDDRow, schema)</span><br><span class="line"> </span><br><span class="line">    // 在2.0.0-preview中, 还不支持自定的Encoder, Row类型不行, 自定义的bean也不行</span><br><span class="line">    // 官方文档也有写通过bean创建Dataset的例子，但是我运行时并不能成功</span><br><span class="line">    // 所以目前需要用创建DataFrame的方法, 来创建DataSet[Row]</span><br><span class="line">    // sqlContext.createDataset(idAgeRDDRow)</span><br><span class="line"> </span><br><span class="line">    // 目前支持String, Integer, Long等类型直接创建Dataset</span><br><span class="line">    Seq(1, 2, 3).toDS().show()</span><br><span class="line">    sqlContext.createDataset(sc.parallelize(Array(1, 2, 3))).show()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">1234567891011121314151617181920212223242526272829303132</span><br></pre></td></tr></table></figure>
+
+<h5 id="RDD和DataFrame比较"><a href="#RDD和DataFrame比较" class="headerlink" title="RDD和DataFrame比较"></a>RDD和DataFrame比较</h5><p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20180117090559218" alt="这里写图片描述"></p>
+<blockquote>
+<p>DataFrame与RDD相同之处，都是不可变分布式弹性数据集。不同之处在于，DataFrame的数据集都是按指定列存储，即结构化数据。类似于传统数据库中的表。<br>DataFrame的设计是为了让大数据处理起来更容易。DataFrame允许开发者把结构化数据集导入DataFrame，并做了higher-level的抽象; DataFrame提供特定领域的语言（DSL）API来操作你的数据集。</p>
+<p>上图直观地体现了DataFrame和RDD的区别。左侧的RDD[Person]虽然以Person为类型参数，但Spark框架本身不了解Person类的内部结构。而右侧的DataFrame却提供了详细的结构信息，使得Spark SQL可以清楚地知道该数据集中包含哪些列，每列的名称和类型各是什么。DataFrame多了数据的结构信息，即schema。RDD是分布式的Java对象的集合。DataFrame是分布式的Row对象的集合。DataFrame除了提供了比RDD更丰富的算子以外，更重要的特点是提升执行效率、减少数据读取以及执行计划的优化，比如filter下推、裁剪等。</p>
+</blockquote>
+<h5 id="RDD和DataSet比较"><a href="#RDD和DataSet比较" class="headerlink" title="RDD和DataSet比较"></a>RDD和DataSet比较</h5><blockquote>
+<p>DataSet以Catalyst逻辑执行计划表示，并且数据以编码的二进制形式被存储，不需要反序列化就可以执行sorting、shuffle等操作。</p>
+<p>DataSet创立需要一个显式的Encoder，把对象序列化为二进制，可以把对象的scheme映射为Spark SQl类型，然而RDD依赖于运行时反射机制。</p>
+<p>通过上面两点，DataSet的性能比RDD的要好很多</p>
+</blockquote>
+<h5 id="DataFrame和DataSet比较"><a href="#DataFrame和DataSet比较" class="headerlink" title="DataFrame和DataSet比较"></a>DataFrame和DataSet比较</h5><p>Dataset可以认为是DataFrame的一个特例，主要区别是Dataset每一个record存储的是一个强类型值而不是一个Row。因此具有如下三个特点：</p>
+<p>1.DataSet可以在编译时检查类型<br>2.是面向对象的编程接口。用wordcount举例：<br>3.后面版本DataFrame会继承DataSet，DataFrame是面向Spark SQL的接口。<br>DataFrame和DataSet可以相互转化， <a target="_blank" rel="noopener" href="http://df.as/">df.as</a>[ElementType]这样可以把DataFrame转化为DataSet，ds.toDF()这样可以把DataSet转化为DataFrame。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//DataFrame</span><br><span class="line"> </span><br><span class="line">// Load a text file and interpret each line as a java.lang.String</span><br><span class="line">val ds = sqlContext.read.text(&quot;/home/spark/1.6/lines&quot;).as[String]</span><br><span class="line">val result = ds</span><br><span class="line">  .flatMap(_.split(&quot; &quot;))               // Split on whitespace</span><br><span class="line">  .filter(_ != &quot;&quot;)                     // Filter empty words</span><br><span class="line">  .toDF()                              // Convert to DataFrame to perform aggregation / sorting</span><br><span class="line">  .groupBy($&quot;value&quot;)                   // Count number of occurences of each word</span><br><span class="line">  .agg(count(&quot;*&quot;) as &quot;numOccurances&quot;)</span><br><span class="line">  .orderBy($&quot;numOccurances&quot; desc)      // Show most common words first</span><br><span class="line"></span><br><span class="line">//DataSet,完全使用scala编程，不要切换到DataFrame</span><br><span class="line"> </span><br><span class="line">val wordCount =</span><br><span class="line">  ds.flatMap(_.split(&quot; &quot;))</span><br><span class="line">    .filter(_ != &quot;&quot;)</span><br><span class="line">    .groupBy(_.toLowerCase()) // Instead of grouping on a column expression (i.e. $&quot;value&quot;) we pass a lambda function</span><br><span class="line">    .count()</span><br><span class="line"></span><br><span class="line">1234567891011121314151617181920</span><br></pre></td></tr></table></figure>
+
+<h5 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h5><p><strong>什么时候用RDD？使用RDD的一般场景:</strong></p>
+<p>你需要使用low-level的transformation和action来控制你的数据集；<br>你得数据集非结构化，比如，流媒体或者文本流；<br>你想使用函数式编程来操作你得数据，而不是用特定领域语言（DSL）表达；<br>你不在乎schema，比如，当通过名字或者列处理（或访问）数据属性不在意列式存储格式；<br>你放弃使用DataFrame和Dataset来优化结构化和半结构化数据集<br>RDD在Apache Spark 2.0中惨遭抛弃？<br>答案当然是 NO !<br>通过后面的描述你会得知：Spark用户可以在RDD，DataFrame和Dataset三种数据集之间无缝转换，而是只需使用超级简单的API方法。</p>
+<p><strong>什么时候使用DataFrame或者Dataset？</strong></p>
+<p>你想使用丰富的语义，high-level抽象，和特定领域语言API，那你可DataFrame或者Dataset；<br>你处理的半结构化数据集需要high-level表达， filter，map，aggregation，average，sum ，SQL 查询，列式访问和使用lambda函数，那你可DataFrame或者Dataset；<br>你想利用编译时高度的type-safety，Catalyst优化和Tungsten的code生成，那你可DataFrame或者Dataset；<br>你想统一和简化API使用跨Spark的Library，那你可DataFrame或者Dataset；<br>如果你是一个R使用者，那你可DataFrame或者Dataset；<br>如果你是一个Python使用者，那你可DataFrame或者Dataset；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">你可以无缝的把DataFrame或者Dataset转化成一个RDD，只需简单的调用 .rdd：</span><br><span class="line"></span><br><span class="line">// select specific fields from the Dataset, apply a predicate</span><br><span class="line">// using the where() method, convert to an RDD, and show first 10</span><br><span class="line">// RDD rows</span><br><span class="line"> </span><br><span class="line">val deviceEventsDS = ds.select($&quot;device_name&quot;, $&quot;cca3&quot;, $&quot;c02_level&quot;).where($&quot;c02_level&quot; &gt; 1300)</span><br><span class="line">// convert to RDDs and take the first 10 rows</span><br><span class="line"> </span><br><span class="line">val eventsRDD = deviceEventsDS.rdd.take(10)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Spark-SQL"><a href="#Spark-SQL" class="headerlink" title="Spark SQL"></a>Spark SQL</h4><p>​	spark SQL是spark的一个模块，主要用于进行结构化数据的处理。它提供的最核心的编程抽象就是DataFrame。</p>
+<h4 id="Spark-Streaming"><a href="#Spark-Streaming" class="headerlink" title="Spark Streaming"></a>Spark Streaming</h4><p>Spark Streaming是核心Spark API的扩展，可实现可扩展、高吞吐量、可容错的实时数据流处理。数据可以从诸如Kafka，Flume，Kinesis或TCP套接字等众多来源获取，并且可以使用由高级函数（如map，reduce，join和window）开发的复杂算法进行流数据处理。最后，处理后的数据可以被推送到文件系统，数据库和实时仪表板。而且，您还可以在数据流上应用Spark提供的机器学习和图处理算法。</p>
+<h3 id="Flume-ng"><a href="#Flume-ng" class="headerlink" title="Flume-ng"></a>Flume-ng</h3><p>Flume是一个分布式、可靠、高可用的海量日志聚合系统，支持在系统中定制各类数据发送方，用于收集数据；同时，Flume提供对数据的简单处理，并写到各种数据接收方的能力。</p>
+<p>Flume在0.9.x和1.x之间有较大的架构调整，1.x版本之后的改称为Flume NG。0.9.x的称为Flume OG。</p>
+<p><strong>Flume OG体系架构如下，</strong>Flume OG已经不再进行版本更新：</p>
+<h3 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>Kafka是最初由Linkedin公司开发，是一个分布式、分区的、多副本的、多订阅者，基于zookeeper协调的分布式日志系统（也可以当做<strong>MQ系统</strong>），常见可以用于web&#x2F;nginx日志、访问日志，消息服务等等，Linkedin于2010年贡献给了Apache基金会并成为顶级开源项目。</p>
+<p>主要应用场景是：日志收集系统和消息系统。</p>
+<p>Kafka主要设计目标如下：</p>
+<ul>
+<li>以时间复杂度为O(1)的方式提供消息持久化能力，即使对TB级以上数据也能保证常数时间的访问性能。</li>
+<li>高吞吐率。即使在非常廉价的商用机器上也能做到单机支持每秒100K条消息的传输。</li>
+<li>支持Kafka Server间的消息分区，及分布式消费，同时保证每个partition内的消息顺序传输。</li>
+<li>同时支持离线数据处理和实时数据处理。</li>
+<li>Scale out:支持在线水平扩展</li>
+</ul>
+<h4 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h4><table>
+<thead>
+<tr>
+<th><strong>名词</strong></th>
+<th align="center"><strong>解释</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Producer</td>
+<td align="center">消息的生成者</td>
+</tr>
+<tr>
+<td>Consumer</td>
+<td align="center">消息的消费者</td>
+</tr>
+<tr>
+<td>ConsumerGroup</td>
+<td align="center">消费者组，可以并行消费Topic中的partition的消息</td>
+</tr>
+<tr>
+<td>Broker</td>
+<td align="center">缓存代理，Kafka集群中的一台或多台服务器统称broker.</td>
+</tr>
+<tr>
+<td>Topic</td>
+<td align="center">Kafka处理资源的消息源(feeds of messages)的不同分类</td>
+</tr>
+<tr>
+<td>Partition</td>
+<td align="center">Topic物理上的分组，一个topic可以分为多个partion,每个partion是一个有序的队列。partion中每条消息都会被分配一个 有序的Id(offset)</td>
+</tr>
+<tr>
+<td>Message</td>
+<td align="center">消息，是通信的基本单位，每个producer可以向一个topic（主题）发布一些消息</td>
+</tr>
+<tr>
+<td>Producers</td>
+<td align="center">消息和数据生成者，向Kafka的一个topic发布消息的 过程叫做producers</td>
+</tr>
+<tr>
+<td>Consumers</td>
+<td align="center">消息和数据的消费者，订阅topic并处理其发布的消费过程叫做consumers</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h3 id="3-1-Producers的概念"><a href="#3-1-Producers的概念" class="headerlink" title="3.1 Producers的概念"></a>3.1 Producers的概念</h3></li>
+</ul>
+<ol>
+<li>消息和数据生成者，向Kafka的一个topic发布消息的过程叫做producers  </li>
+<li>Producer将消息发布到指定的Topic中，同时Producer也能决定将此消息归属于哪个partition；比如基于round-robin方式     或者通过其他的一些算法等；</li>
+<li>异步发送批量发送可以很有效的提高发送效率。kafka producer的异步发送模式允许进行批量发送，先将消息缓存到内存中，然后一次请求批量发送出去。</li>
+</ol>
+<ul>
+<li><h3 id="3-2-broker的概念"><a href="#3-2-broker的概念" class="headerlink" title="3.2 broker的概念:"></a>3.2 broker的概念:</h3></li>
+</ul>
+<ol>
+<li>Broker没有副本机制，一旦broker宕机，该broker的消息将都不可用。</li>
+<li>Broker不保存订阅者的状态，由订阅者自己保存。</li>
+<li>无状态导致消息的删除成为难题（可能删除的消息正在被订阅），Kafka采用基于时间的SLA（服务保证），消息保存一定时间（通常7天）后会删除。</li>
+<li>消费订阅者可以rewind back到任意位置重新进行消费，当订阅者故障时，可以选择最小的offset(id)进行重新读取消费消息</li>
+</ol>
+<ul>
+<li><h3 id="3-3-Message组成"><a href="#3-3-Message组成" class="headerlink" title="3.3 Message组成"></a>3.3 Message组成</h3></li>
+</ul>
+<ol>
+<li>Message消息：是通信的基本单位，每个producer可以向一个topic发布消息。</li>
+<li>Kafka中的Message是以topic为基本单位组织的，不同的topic之间是相互独立的，每个topic又可以分成不同的partition每个partition储存一部分</li>
+<li>partion中的每条Message包含以下三个属性：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>offset</th>
+<th>long</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MessageSize</td>
+<td>int32</td>
+</tr>
+<tr>
+<td>data</td>
+<td>messages的具体内容</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h3 id="3-4-Consumers的概念"><a href="#3-4-Consumers的概念" class="headerlink" title="3.4 Consumers的概念"></a>3.4 Consumers的概念</h3><p> 消息和数据消费者，订阅topic并处理其发布的消息的过程叫做consumers.<br> 在kafka中，我们可以认为一个group是一个“订阅者”，一个topic中的每个partions只会被一个“订阅者”中的一个consumer<br> 消费，不过一个consumer可以消费多个partitions中的消息<br> 注:<br>  Kafka的设计原理决定，对于一个topic，同一个group不能多于partition个数的consumer同时消费，否则将意味着某些           consumer无法得到消息</p>
+</li>
+<li><h3 id="3-5-关键术语"><a href="#3-5-关键术语" class="headerlink" title="3.5 关键术语"></a>3.5 关键术语</h3></li>
+</ul>
+<p><strong>主题，分区和偏移</strong></p>
+<p>主题是特定的数据流。它与NoSQL数据库中的表非常相似。与NoSQL数据库中的表一样，该主题被拆分为分区，使主题能够分布在各个节点上。与表中的主键一样，主题具有每个分区的偏移量。您可以使用其主题，分区和偏移量唯一标识消息。</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/2019051511064032.png" alt="img"></p>
+<p><strong>分区</strong></p>
+<p>分区使主题可以在群集中分布。分区是水平可伸缩性的并行度单位。一个主题可以跨节点进行多个分区扩展。</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20190515110659387.png" alt="img"></p>
+<p>消息根据分区键分配给分区; 如果没有分区键，则随机分配该分区。使用正确的密钥来避免热点非常重要。</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/20190515110713341.png" alt="img"></p>
+<p>分区中的每个消息都被分配一个称为偏移量的增量ID。每个分区的偏移量是唯一的，消息只在分区内排序。写入分区的消息是不可变的。</p>
+<h4 id="消息系统介绍"><a href="#消息系统介绍" class="headerlink" title="消息系统介绍"></a>消息系统介绍</h4><p>一个消息系统负责将数据从一个应用传递到另外一个应用，应用只需关注于数据，无需关注数据在两个或多个应用间是如何传递的。分布式消息传递基于可靠的消息队列，在客户端应用和消息系统之间异步传递消息。有两种主要的消息传递模式：<strong>点对点传递模式、发布-订阅模式</strong>。大部分的消息系统选用发布-订阅模式。<strong>Kafka就是一种发布-订阅模式</strong>。</p>
+<h4 id="点对点消息传递模式"><a href="#点对点消息传递模式" class="headerlink" title="点对点消息传递模式"></a>点对点消息传递模式</h4><p>在点对点消息系统中，消息持久化到一个队列中。此时，将有一个或多个消费者消费队列中的数据。但是一条消息只能被消费一次。当一个消费者消费了队列中的某条数据之后，该条数据则从消息队列中删除。该模式即使有多个消费者同时消费数据，也能保证数据处理的顺序。这种架构描述示意图如下：</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1228818-20180507190326476-771565746.png" alt="img"></p>
+<p><strong>生产者发送一条消息到queue，只有一个消费者能收到</strong>。</p>
+<h4 id="发布-订阅消息传递模式"><a href="#发布-订阅消息传递模式" class="headerlink" title="发布-订阅消息传递模式"></a>发布-订阅消息传递模式</h4><p>在发布-订阅消息系统中，消息被持久化到一个topic中。与点对点消息系统不同的是，消费者可以订阅一个或多个topic，消费者可以消费该topic中所有的数据，同一条数据可以被多个消费者消费，数据被消费后不会立马删除。在发布-订阅消息系统中，消息的生产者称为发布者，消费者称为订阅者。该模式的示例图如下：</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/1228818-20180507190443404-1266011458.png" alt="img"></p>
+<p><strong>发布者发送到topic的消息，只有订阅了topic的订阅者才会收到消息</strong>。</p>
+<h4 id="Kafka的优点"><a href="#Kafka的优点" class="headerlink" title="Kafka的优点"></a>Kafka的优点</h4><h5 id="解耦"><a href="#解耦" class="headerlink" title="解耦"></a>解耦</h5><p>在项目启动之初来预测将来项目会碰到什么需求，是极其困难的。消息系统在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口。这允许你独立的扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束。</p>
+<h5 id="冗余（副本）"><a href="#冗余（副本）" class="headerlink" title="冗余（副本）"></a>冗余（副本）</h5><p>有些情况下，处理数据的过程会失败。除非数据被持久化，否则将造成丢失。消息队列把数据进行持久化直到它们已经被完全处理，通过这一方式规避了数据丢失风险。许多消息队列所采用的”插入-获取-删除”范式中，在把一个消息从队列中删除之前，需要你的处理系统明确的指出该消息已经被处理完毕，从而确保你的数据被安全的保存直到你使用完毕。</p>
+<h5 id="扩展性"><a href="#扩展性" class="headerlink" title="扩展性"></a>扩展性</h5><p>因为消息队列解耦了你的处理过程，所以增大消息入队和处理的频率是很容易的，只要另外增加处理过程即可。不需要改变代码、不需要调节参数。扩展就像调大电力按钮一样简单。</p>
+<h5 id="灵活性-amp-峰值处理能力"><a href="#灵活性-amp-峰值处理能力" class="headerlink" title="灵活性&amp;峰值处理能力"></a>灵活性&amp;峰值处理能力</h5><p>在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流量并不常见；如果为以能处理这类峰值访问为标准来投入资源随时待命无疑是巨大的浪费。使用消息队列能够使关键组件顶住突发的访问压力，而不会因为突发的超负荷的请求而完全崩溃。</p>
+<h5 id="可恢复性"><a href="#可恢复性" class="headerlink" title="可恢复性"></a>可恢复性</h5><p>系统的一部分组件失效时，不会影响到整个系统。消息队列降低了进程间的耦合度，所以即使一个处理消息的进程挂掉，加入队列中的消息仍然可以在系统恢复后被处理。</p>
+<h5 id="顺序保证"><a href="#顺序保证" class="headerlink" title="顺序保证"></a>顺序保证</h5><p>在大多使用场景下，数据处理的顺序都很重要。大部分消息队列本来就是排序的，并且能保证数据会按照特定的顺序来处理。Kafka保证一个Partition内的消息的有序性。</p>
+<h5 id="缓冲"><a href="#缓冲" class="headerlink" title="缓冲"></a>缓冲</h5><p>在任何重要的系统中，都会有需要不同的处理时间的元素。例如，加载一张图片比应用过滤器花费更少的时间。消息队列通过一个缓冲层来帮助任务最高效率的执行———写入队列的处理会尽可能的快速。该缓冲有助于控制和优化数据流经过系统的速度。</p>
+<h5 id="异步通信"><a href="#异步通信" class="headerlink" title="异步通信"></a>异步通信</h5><p>很多时候，用户不想也不需要立即处理消息。消息队列提供了异步处理机制，允许用户把一个消息放入队列，但并不立即处理它。想向队列中放入多少消息就放多少，然后在需要的时候再去处理它们。</p>
+<h4 id="常用Message-Queue对比"><a href="#常用Message-Queue对比" class="headerlink" title="常用Message Queue对比"></a>常用Message Queue对比</h4><h5 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h5><p>RabbitMQ是使用Erlang编写的一个开源的消息队列，本身支持很多的协议：AMQP，XMPP, SMTP, STOMP，也正因如此，它非常重量级，更适合于企业级的开发。同时实现了Broker构架，这意味着消息在发送给客户端时先在中心队列排队。对路由，负载均衡或者数据持久化都有很好的支持。</p>
+<h5 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h5><p>Redis是一个基于Key-Value对的NoSQL数据库，开发维护很活跃。虽然它是一个Key-Value数据库存储系统，但它本身支持MQ功能，所以完全可以当做一个轻量级的队列服务来使用。对于RabbitMQ和Redis的入队和出队操作，各执行100万次，每10万次记录一次执行时间。测试数据分为128Bytes、512Bytes、1K和10K四个不同大小的数据。实验表明：入队时，当数据比较小时Redis的性能要高于RabbitMQ，而如果数据大小超过了10K，Redis则慢的无法忍受；出队时，无论数据大小，Redis都表现出非常好的性能，而RabbitMQ的出队性能则远低于Redis。</p>
+<h5 id="ZeroMQ"><a href="#ZeroMQ" class="headerlink" title="ZeroMQ"></a>ZeroMQ</h5><p>ZeroMQ号称最快的消息队列系统，尤其针对大吞吐量的需求场景。ZeroMQ能够实现RabbitMQ不擅长的高级&#x2F;复杂的队列，但是开发人员需要自己组合多种技术框架，技术上的复杂度是对这MQ能够应用成功的挑战。ZeroMQ具有一个独特的非中间件的模式，你不需要安装和运行一个消息服务器或中间件，因为你的应用程序将扮演这个服务器角色。你只需要简单的引用ZeroMQ程序库，可以使用NuGet安装，然后你就可以愉快的在应用程序之间发送消息了。但是ZeroMQ仅提供非持久性的队列，也就是说如果宕机，数据将会丢失。其中，Twitter的Storm 0.9.0以前的版本中默认使用ZeroMQ作为数据流的传输（Storm从0.9版本开始同时支持ZeroMQ和Netty作为传输模块）。</p>
+<h5 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h5><p>ActiveMQ是Apache下的一个子项目。 类似于ZeroMQ，它能够以代理人和点对点的技术实现队列。同时类似于RabbitMQ，它少量代码就可以高效地实现高级应用场景。</p>
+<h5 id="Kafka-x2F-Jafka"><a href="#Kafka-x2F-Jafka" class="headerlink" title="Kafka&#x2F;Jafka"></a>Kafka&#x2F;Jafka</h5><p>Kafka是Apache下的一个子项目，是一个高性能跨语言分布式发布&#x2F;订阅消息队列系统，而Jafka是在Kafka之上孵化而来的，即Kafka的一个升级版。具有以下特性：快速持久化，可以在O(1)的系统开销下进行消息持久化；高吞吐，在一台普通的服务器上既可以达到10W&#x2F;s的吞吐速率；完全的分布式系统，Broker、Producer、Consumer都原生自动支持分布式，自动实现负载均衡；支持Hadoop数据并行加载，对于像Hadoop的一样的日志数据和离线分析系统，但又要求实时处理的限制，这是一个可行的解决方案。Kafka通过Hadoop的并行加载机制统一了在线和离线的消息处理。Apache Kafka相对于ActiveMQ是一个非常轻量级的消息系统，除了性能非常好之外，还是一个工作良好的分布式系统。</p>
+<h2 id="算法笔记"><a href="#算法笔记" class="headerlink" title="算法笔记"></a>算法笔记</h2><h3 id="统计推荐"><a href="#统计推荐" class="headerlink" title="统计推荐"></a>统计推荐</h3><p>主要就是通过spark.sql使用查询语句进行排行的</p>
+<h4 id="历史热门商品推荐"><a href="#历史热门商品推荐" class="headerlink" title="历史热门商品推荐"></a>历史热门商品推荐</h4><p>根据评价次数进行排行</p>
+<h4 id="近期热门"><a href="#近期热门" class="headerlink" title="近期热门"></a>近期热门</h4><p>按月进行热门热门商品推荐</p>
+<h4 id="平均评分成绩排行"><a href="#平均评分成绩排行" class="headerlink" title="平均评分成绩排行"></a>平均评分成绩排行</h4><p>对通过商品的评分取均值进行排行</p>
+<h3 id="离线推荐"><a href="#离线推荐" class="headerlink" title="离线推荐"></a>离线推荐</h3><h4 id="ALS算法"><a href="#ALS算法" class="headerlink" title="ALS算法"></a>ALS算法</h4><p>隐语义模型是一种比较常用的协同过滤算法，基本思想是对稀疏矩阵进行模型分解，评估出缺失项的值，以此来得到一个基本的训练模型。然后依照此模型可以针对新的用户和物品数据进行评估。ALS是采用交替的最小二乘法来算出缺失项的。交替的最小二乘法是在最小二乘法的基础上发展而来的。</p>
+<p>协同过滤算法，用户特征，商品特征，推荐</p>
+<h5 id="模型评估和参数选取"><a href="#模型评估和参数选取" class="headerlink" title="模型评估和参数选取"></a>模型评估和参数选取</h5><h6 id="均方根误差"><a href="#均方根误差" class="headerlink" title="均方根误差"></a>均方根误差</h6><p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/image-20210120003810727.png" alt="image-20210120003810727"></p>
+<h4 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h4><p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/image-20210120003449718.png" alt="image-20210120003449718"></p>
+<p>tpi 商品p的特征向量， tqi商品q的特征向量</p>
+<p>基于商品的特征向量，计算商品的相似度，进行推荐</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/image-20210120003935012.png" alt="image-20210120003935012"></p>
+<h3 id="实时推荐"><a href="#实时推荐" class="headerlink" title="实时推荐"></a>实时推荐</h3><p>背景：用户对产品的偏好随时间的推移总是会改变</p>
+<p>要求：</p>
+<ol>
+<li><p>用户评分后或者最近几次评分后系统可以更新推荐结果</p>
+</li>
+<li><p>计算快，准确率可适当降低</p>
+</li>
+</ol>
+<p>推荐算法公式：</p>
+<p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/clip_image002.jpg" alt="img"></p>
+<p>Rr表示用户u 对商品r 的评分；</p>
+<p>sim(q,r)表示商品q 与商品r 的相似度，设定最小相似度为0.6，当商品q和商品r 相似度低于0.6 的阈值，则视为两者不相关并忽略；</p>
+<p>sim_sum 表示q 与RK 中商品相似度大于最小阈值的个数；</p>
+<p>incount 表示RK 中与商品q 相似的、且本身评分较高（&gt;&#x3D;3）的商品个数；</p>
+<p>recount 表示RK 中与商品q 相似的、且本身评分较低（&lt;3）的商品个数；</p>
+<p>公式前部分：对于每个候选商品q，从u 最近的K 个评分中，找出与q 相似度较高（&gt;&#x3D;0.6）的u 已评分商品们（复用离线的相似表），对于这些商品们中的每个商品r，将r 与q 的相似度乘以用户u 对r 的评分，将这些乘积计算平均数，作为用户u 对商品q 的评分预测</p>
+<p>后半部分（奖惩因子）：</p>
+<p>incount：跟候选商品q相似且评分大于某一阈值（&gt;&#x3D;3)的个数</p>
+<p>与候选商品q的相似度越高还评分越高的，我们应该更大力度的推荐，优先级更高。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://garymk.cn">Gary MK</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://garymk.cn/2021/01/01/%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">https://garymk.cn/2021/01/01/电商推荐系统/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://garymk.cn" target="_blank">GaryMK</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a></div><div class="post_share"><div class="social-share" data-image="https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/01/01/3D-Object-Detect/" title="3D-Object-Detect"><img class="cover" src="https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">3D-Object-Detect</div></div></a></div><div class="next-post pull-right"><a href="/2020/12/28/Git/" title="Git"><img class="cover" src="https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Git</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM40NV46MrdfnryFg6EIMAlt8uO7tfbtbs6XH9W2Z1Opfw/0" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Gary MK</div><div class="author-info__description">程序开发与算法研究</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/GaryMK"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/img/weixin.png" target="_blank" title="WeChat"><i class="fa-brands fa-weixin" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://github.com/garymk" target="_blank" title="Github"><i class="fab fa-github" style="color: #4a7dbe;"></i></a><a class="social-icon" href="mailto:chenxingmk@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa-solid fa-rss" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">电商推荐系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">1.1.</span> <span class="toc-text">笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB"><span class="toc-number">1.1.1.</span> <span class="toc-text">MongoDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scala"><span class="toc-number">1.1.2.</span> <span class="toc-text">Scala</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UGC"><span class="toc-number">1.1.3.</span> <span class="toc-text">UGC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDF"><span class="toc-number">1.1.4.</span> <span class="toc-text">UDF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark"><span class="toc-number">1.1.5.</span> <span class="toc-text">Spark</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Spark%EF%BC%9F"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">为什么要学习Spark？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Hadoop%E7%9A%84MapReduce%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-number">1.1.5.1.1.</span> <span class="toc-text">Hadoop的MapReduce计算模型存在的问题：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spark%E7%9A%84%E6%9C%80%E5%A4%A7%E7%89%B9%E7%82%B9%EF%BC%9A%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AD%98"><span class="toc-number">1.1.5.1.2.</span> <span class="toc-text">Spark的最大特点：基于内存</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A%E5%BF%AB%E3%80%81%E6%98%93%E7%94%A8%E3%80%81%E9%80%9A%E7%94%A8%E3%80%81%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">Spark的特点：快、易用、通用、兼容性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BF%AB"><span class="toc-number">1.1.5.2.1.</span> <span class="toc-text">快</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%98%93%E7%94%A8"><span class="toc-number">1.1.5.2.2.</span> <span class="toc-text">易用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E7%94%A8"><span class="toc-number">1.1.5.2.3.</span> <span class="toc-text">通用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">1.1.5.2.4.</span> <span class="toc-text">兼容性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark-Core"><span class="toc-number">1.1.6.</span> <span class="toc-text">Spark Core</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">主要功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark-Core%E5%AD%90%E6%A1%86%E6%9E%B6"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">Spark Core子框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.6.3.</span> <span class="toc-text">Spark架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.6.4.</span> <span class="toc-text">Spark计算模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">1.1.6.5.</span> <span class="toc-text">组件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.6.5.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RDD"><span class="toc-number">1.1.6.5.2.</span> <span class="toc-text">RDD</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DataFrame"><span class="toc-number">1.1.6.5.3.</span> <span class="toc-text">DataFrame</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DataSet"><span class="toc-number">1.1.6.5.4.</span> <span class="toc-text">DataSet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RDD%E5%92%8CDataFrame%E6%AF%94%E8%BE%83"><span class="toc-number">1.1.6.5.5.</span> <span class="toc-text">RDD和DataFrame比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RDD%E5%92%8CDataSet%E6%AF%94%E8%BE%83"><span class="toc-number">1.1.6.5.6.</span> <span class="toc-text">RDD和DataSet比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DataFrame%E5%92%8CDataSet%E6%AF%94%E8%BE%83"><span class="toc-number">1.1.6.5.7.</span> <span class="toc-text">DataFrame和DataSet比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.6.5.8.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark-SQL"><span class="toc-number">1.1.6.6.</span> <span class="toc-text">Spark SQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spark-Streaming"><span class="toc-number">1.1.6.7.</span> <span class="toc-text">Spark Streaming</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flume-ng"><span class="toc-number">1.1.7.</span> <span class="toc-text">Flume-ng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kafka"><span class="toc-number">1.1.8.</span> <span class="toc-text">Kafka</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.8.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.8.2.</span> <span class="toc-text">核心概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Producers%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.9.</span> <span class="toc-text">3.1 Producers的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-broker%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.10.</span> <span class="toc-text">3.2 broker的概念:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Message%E7%BB%84%E6%88%90"><span class="toc-number">1.1.11.</span> <span class="toc-text">3.3 Message组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Consumers%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.12.</span> <span class="toc-text">3.4 Consumers的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B3%E9%94%AE%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.1.13.</span> <span class="toc-text">3.5 关键术语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.13.1.</span> <span class="toc-text">消息系统介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%AF%B9%E7%82%B9%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.13.2.</span> <span class="toc-text">点对点消息传递模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.13.3.</span> <span class="toc-text">发布-订阅消息传递模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Kafka%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-number">1.1.13.4.</span> <span class="toc-text">Kafka的优点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E8%80%A6"><span class="toc-number">1.1.13.4.1.</span> <span class="toc-text">解耦</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%97%E4%BD%99%EF%BC%88%E5%89%AF%E6%9C%AC%EF%BC%89"><span class="toc-number">1.1.13.4.2.</span> <span class="toc-text">冗余（副本）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%80%A7"><span class="toc-number">1.1.13.4.3.</span> <span class="toc-text">扩展性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%81%B5%E6%B4%BB%E6%80%A7-amp-%E5%B3%B0%E5%80%BC%E5%A4%84%E7%90%86%E8%83%BD%E5%8A%9B"><span class="toc-number">1.1.13.4.4.</span> <span class="toc-text">灵活性&amp;峰值处理能力</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E6%81%A2%E5%A4%8D%E6%80%A7"><span class="toc-number">1.1.13.4.5.</span> <span class="toc-text">可恢复性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E4%BF%9D%E8%AF%81"><span class="toc-number">1.1.13.4.6.</span> <span class="toc-text">顺序保证</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%93%E5%86%B2"><span class="toc-number">1.1.13.4.7.</span> <span class="toc-text">缓冲</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="toc-number">1.1.13.4.8.</span> <span class="toc-text">异步通信</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8Message-Queue%E5%AF%B9%E6%AF%94"><span class="toc-number">1.1.13.5.</span> <span class="toc-text">常用Message Queue对比</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RabbitMQ"><span class="toc-number">1.1.13.5.1.</span> <span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis"><span class="toc-number">1.1.13.5.2.</span> <span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ZeroMQ"><span class="toc-number">1.1.13.5.3.</span> <span class="toc-text">ZeroMQ</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ActiveMQ"><span class="toc-number">1.1.13.5.4.</span> <span class="toc-text">ActiveMQ</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Kafka-x2F-Jafka"><span class="toc-number">1.1.13.5.5.</span> <span class="toc-text">Kafka&#x2F;Jafka</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0"><span class="toc-number">1.2.</span> <span class="toc-text">算法笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E6%8E%A8%E8%8D%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">统计推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2%E7%83%AD%E9%97%A8%E5%95%86%E5%93%81%E6%8E%A8%E8%8D%90"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">历史热门商品推荐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%91%E6%9C%9F%E7%83%AD%E9%97%A8"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">近期热门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E8%AF%84%E5%88%86%E6%88%90%E7%BB%A9%E6%8E%92%E8%A1%8C"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">平均评分成绩排行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E6%8E%A8%E8%8D%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">离线推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ALS%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">ALS算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E5%92%8C%E5%8F%82%E6%95%B0%E9%80%89%E5%8F%96"><span class="toc-number">1.2.2.1.1.</span> <span class="toc-text">模型评估和参数选取</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%9D%87%E6%96%B9%E6%A0%B9%E8%AF%AF%E5%B7%AE"><span class="toc-number">1.2.2.1.1.1.</span> <span class="toc-text">均方根误差</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">特征向量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%97%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">1.2.3.</span> <span class="toc-text">实时推荐</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/Mac%E7%B3%BB%E7%BB%9FPython%E6%8A%A5%E9%94%99/" title="Mac系统Python报错">Mac系统Python报错</a><time datetime="2023-08-29T11:58:44.000Z" title="发表于 2023-08-29 19:58:44">2023-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/08/Mac%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E2%80%9C%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80-%E2%80%9D%E9%97%AE%E9%A2%98/" title="Mac安装软件“已损坏，无法打开.....”问题">Mac安装软件“已损坏，无法打开.....”问题</a><time datetime="2023-08-08T07:37:48.000Z" title="发表于 2023-08-08 15:37:48">2023-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/08/Typora%E9%85%8D%E7%BD%AEPicGo-Core%E5%9B%BE%E5%BA%8A/" title="Typora配置PicGo-Core图床">Typora配置PicGo-Core图床</a><time datetime="2023-08-08T05:32:18.000Z" title="发表于 2023-08-08 13:32:18">2023-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/08/git%E6%8B%89%E5%8F%96%E6%8A%A5RPC&amp;Band%20Owner/" title="Git拉取报RPC&amp;Bad Owner">Git拉取报RPC&amp;Bad Owner</a><time datetime="2023-08-08T01:31:42.000Z" title="发表于 2023-08-08 09:31:42">2023-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/05/hello-world/" title="Hello World">Hello World</a><time datetime="2023-08-05T11:52:10.000Z" title="发表于 2023-08-05 19:52:10">2023-08-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Gary MK</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://garymk.github.io/GaryMK.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline.garymk.cn',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'object') initWaline()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css').then(() => {
+      getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+    })
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://waline.garymk.cn/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-5G6KHDXYS9', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
