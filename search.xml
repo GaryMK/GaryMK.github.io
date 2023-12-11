@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>RN环境配置</title>
+      <link href="/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RN环境配置"><a href="#RN环境配置" class="headerlink" title="RN环境配置"></a>RN环境配置</h1><h2 id="nvm配置"><a href="#nvm配置" class="headerlink" title="nvm配置"></a>nvm配置</h2><p>nvm下载安装</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</span><br></pre></td></tr></table></figure><p>nvm配置环境</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开～/.zshrc</span></span><br><span class="line">open -e ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在zsh配置文件中添加如下代码</span></span><br><span class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">&quot;<span class="subst">$([ -z <span class="string">&quot;<span class="variable">$&#123;XDG_CONFIG_HOME-&#125;</span>&quot;</span> ] &amp;&amp; printf %s <span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>/.nvm&quot;</span> || printf %s <span class="string">&quot;<span class="variable">$&#123;XDG_CONFIG_HOME&#125;</span>/nvm&quot;</span>)</span>&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="comment"># This loads nvm</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新配置文件</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure><blockquote><p>nvm常用命令：</p><p>nvm install ：安装指定版本的Node.js</p><p>nvm use ：切换到指定版本的Node.js</p><p>nvm current：显示当前正在使用的Node.js版本</p><p>nvm ls：列出所有已经安装的Node.js版本</p><p>nvm alias：为指定版本创建一个别名，例如nvm alias default 18.16.1</p><p>nvm uninstall ：卸载指定版本的Node.js，例如nvm uninstall 18.16.1</p><p>nvm reinstall-packages ：在切换Node.js版本后，重新安装已安装的全局npm包</p><p>nvm on：打开nvm自动切换</p><p>nvm off：关闭nvm自动切换</p></blockquote><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看可安装的版本</span></span><br><span class="line">nvm list-remote</span><br><span class="line"><span class="comment"># 安装指定版本</span></span><br><span class="line">nvm install 20.10.0</span><br></pre></td></tr></table></figure><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install watchman</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用nrm工具切换淘宝源</span></span><br><span class="line">npx nrm use taobao</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果之后需要切换回官方源可使用</span></span><br><span class="line">npx nrm use npm</span><br><span class="line"></span><br><span class="line"><span class="comment"># Yarn是 Facebook 提供的替代 npm 的工具，可以加速 node 模块的下载</span></span><br><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure><h2 id="配置Android开发环境"><a href="#配置Android开发环境" class="headerlink" title="配置Android开发环境"></a>配置Android开发环境</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>zsh安装及配置</title>
+      <link href="/2023/12/11/zsh%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
+      <url>/2023/12/11/zsh%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="zsh安装及配置"><a href="#zsh安装及配置" class="headerlink" title="zsh安装及配置"></a>zsh安装及配置</h1><h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure><h4 id="配置brew"><a href="#配置brew" class="headerlink" title="配置brew"></a>配置brew</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">echo</span>; <span class="built_in">echo</span> <span class="string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span>) &gt;&gt; /Users/mukaikai/.zprofile</span><br><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(/opt/homebrew/bin/brew shellenv)</span>&quot;</span></span><br></pre></td></tr></table></figure><h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><p>macOS 安装 zsh</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure><h3 id="zsh设置"><a href="#zsh设置" class="headerlink" title="zsh设置"></a>zsh设置</h3><p>查看系统已有的 shell</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure><p>输出结果：</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/bash</span><br><span class="line">/bin/csh</span><br><span class="line">/bin/dash</span><br><span class="line">/bin/ksh</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure><p>以上输出结果可以看到已经有 zsh 了</p><p>更换默认 shell</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure><p>重启系统！</p><p>查看当前使用的 shell</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure><p>输出结果：</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure><p>以上输出结果表示默认的shell已经切换至 zsh</p><h3 id="安装Oh-My-Zsh"><a href="#安装Oh-My-Zsh" class="headerlink" title="安装Oh My Zsh"></a>安装Oh My Zsh</h3><ol><li>到 Oh My Zsh 的 Github 页面 <a href="https://github.com/ohmyzsh/ohmyzsh">Oh My Zsh</a></li><li>将文件下载至 ~&#x2F;Downloads 目录。下载好的文件名为 ohmyzsh-master.zip</li><li>到下好的文件所在目录，执行 unzip ohmyzsh-master.zip 将文件解压，解压后得到 ohmyzsh-master 的目录</li><li>执行 cd ohmyzsh-master&#x2F;tools 进入 tools 目录</li><li>tools 目录里 有一个 install.sh 的 shell 脚本文件，这是 Oh My Zsh 的安装脚本。通过 .&#x2F;install.sh 来执行 install.sh 文件，进行 Oh My Zsh 的安装</li><li>恭喜你，如无意外，Oh My Zsh 就已经安装好了</li></ol><h3 id="Oh-My-Zsh配置"><a href="#Oh-My-Zsh配置" class="headerlink" title="Oh My Zsh配置"></a>Oh My Zsh配置</h3><p>修改 zsh 主题</p><ul><li>zsh 主题都在路径<code>~/.oh-my-zsh/themes</code>中，使某一主题生效的文件为<code>~/.zshrc</code>文件，找到<code>ZSH_THEME=&quot;robbyrussell&quot;</code>一行（大概11行左右），把其注释掉，在下面添一行<code>ZSH_THEME=&quot;agnoster&quot;</code>，之后关闭终端，再重启就好了。</li></ul><p>安装powerline-fonts（防止加载某些配色方案后终端的乱码情况）</p><ul><li>从<a href="https://github.com/supermarin/powerline-fonts%E4%B8%8B%E8%BD%BD%E5%AD%97%E4%BD%93%E5%8C%85">https://github.com/supermarin/powerline-fonts下载字体包</a></li><li>在下载好的文件中找到Monaco for Powerline.otf，双击安装字体</li><li>终端 -&gt; 设置 -&gt; 描述文件 -&gt; 字体，进行字体设置</li></ul><p>安装 zsh 高亮插件</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/hello-luiswu/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure><p>安装 zsh 历史记录的自动补全插件</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/hello-luiswu/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><p>安装zsh命令拓展补全插件</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-completions <span class="variable">$&#123;ZSH_CUSTOM:=~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-completions</span><br></pre></td></tr></table></figure><p>启动插件</p><p>修改 zsh 的配置文件</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure><p>找到以下内容：</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">plugins=(git)</span><br></pre></td></tr></table></figure><p>替换成以下内容：</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)</span><br></pre></td></tr></table></figure><h3 id="Solarized主题"><a href="#Solarized主题" class="headerlink" title="Solarized主题"></a>Solarized主题</h3><p><a href="https://github.com/altercation/solarized">https://github.com/altercation/solarized</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> zsh </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mac系统Python报错</title>
       <link href="/2023/08/29/Mac%E7%B3%BB%E7%BB%9FPython%E6%8A%A5%E9%94%99/"/>
       <url>/2023/08/29/Mac%E7%B3%BB%E7%BB%9FPython%E6%8A%A5%E9%94%99/</url>

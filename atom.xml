@@ -6,7 +6,7 @@
   <link href="https://garymk.cn/atom.xml" rel="self"/>
   
   <link href="https://garymk.cn/"/>
-  <updated>2023-08-29T11:58:44.000Z</updated>
+  <updated>2023-12-11T13:49:48.000Z</updated>
   <id>https://garymk.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RN环境配置</title>
+    <link href="https://garymk.cn/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://garymk.cn/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-12-11T13:49:48.000Z</published>
+    <updated>2023-12-11T13:49:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RN环境配置&quot;&gt;&lt;a href=&quot;#RN环境配置&quot; class=&quot;headerlink&quot; title=&quot;RN环境配置&quot;&gt;&lt;/a&gt;RN环境配置&lt;/h1&gt;&lt;h2 id=&quot;nvm配置&quot;&gt;&lt;a href=&quot;#nvm配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="https://garymk.cn/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>zsh安装及配置</title>
+    <link href="https://garymk.cn/2023/12/11/zsh%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
+    <id>https://garymk.cn/2023/12/11/zsh%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-12-11T13:24:32.000Z</published>
+    <updated>2023-12-11T13:24:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;zsh安装及配置&quot;&gt;&lt;a href=&quot;#zsh安装及配置&quot; class=&quot;headerlink&quot; title=&quot;zsh安装及配置&quot;&gt;&lt;/a&gt;zsh安装及配置&lt;/h1&gt;&lt;h3 id=&quot;安装Homebrew&quot;&gt;&lt;a href=&quot;#安装Homebrew&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="https://garymk.cn/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="zsh" scheme="https://garymk.cn/tags/zsh/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac系统Python报错</title>
@@ -369,40 +417,6 @@
     
     
     <category term="Redis" scheme="https://garymk.cn/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>术语</title>
-    <link href="https://garymk.cn/2020/12/27/%E6%9C%AF%E8%AF%AD/"/>
-    <id>https://garymk.cn/2020/12/27/%E6%9C%AF%E8%AF%AD/</id>
-    <published>2020-12-27T14:35:19.000Z</published>
-    <updated>2020-12-27T14:35:19.000Z</updated>
-    
-    
-    <summary type="html">程序员工作中遇到的一些专业术语总结</summary>
-    
-    
-    
-    <category term="工作" scheme="https://garymk.cn/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>12月1日</title>
-    <link href="https://garymk.cn/2020/12/01/12%E6%9C%881%E6%97%A5/"/>
-    <id>https://garymk.cn/2020/12/01/12%E6%9C%881%E6%97%A5/</id>
-    <published>2020-12-01T07:28:37.000Z</published>
-    <updated>2020-12-01T07:28:37.000Z</updated>
-    
-    
-    <summary type="html">2020年12月1日随记</summary>
-    
-    
-    
-    <category term="随记" scheme="https://garymk.cn/categories/%E9%9A%8F%E8%AE%B0/"/>
-    
     
   </entry>
   
