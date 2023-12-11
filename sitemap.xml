@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://garymk.cn/gallery/marvel/marvel.html</loc>
+    <loc>https://garymk.cn/gallery/wallpaper/index.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://garymk.cn/gallery/wallpaper/index.html</loc>
+    <loc>https://garymk.cn/gallery/marvel/marvel.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -501,14 +501,14 @@
   </url>
   
   <url>
-    <loc>https://garymk.cn/tags/BERT%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://garymk.cn/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://garymk.cn/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://garymk.cn/tags/BERT%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -587,14 +587,14 @@
   </url>
   
   <url>
-    <loc>https://garymk.cn/categories/%E5%B7%A5%E4%BD%9C/</loc>
+    <loc>https://garymk.cn/categories/%E7%AE%97%E6%B3%95/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://garymk.cn/categories/%E7%AE%97%E6%B3%95/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <loc>https://garymk.cn/categories/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
