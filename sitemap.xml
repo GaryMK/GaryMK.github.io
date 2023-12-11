@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://garymk.cn/gallery/wallpaper/index.html</loc>
+    <loc>https://garymk.cn/gallery/marvel/marvel.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://garymk.cn/gallery/marvel/marvel.html</loc>
+    <loc>https://garymk.cn/gallery/wallpaper/index.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -473,14 +473,14 @@
   </url>
   
   <url>
-    <loc>https://garymk.cn/tags/Redis/</loc>
+    <loc>https://garymk.cn/tags/%E9%87%91%E8%9E%8D%E5%AD%A6/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://garymk.cn/tags/%E9%87%91%E8%9E%8D%E5%AD%A6/</loc>
+    <loc>https://garymk.cn/tags/Redis/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

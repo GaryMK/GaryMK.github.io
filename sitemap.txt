@@ -1,5 +1,5 @@
-https://garymk.cn/gallery/wallpaper/index.html
 https://garymk.cn/gallery/marvel/marvel.html
+https://garymk.cn/gallery/wallpaper/index.html
 https://garymk.cn/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/
 https://garymk.cn/2023/12/11/zsh%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/
 https://garymk.cn/2023/08/29/Mac%E7%B3%BB%E7%BB%9FPython%E6%8A%A5%E9%94%99/
@@ -53,8 +53,8 @@ https://garymk.cn/tags/SCI/
 https://garymk.cn/tags/Typora/
 https://garymk.cn/tags/PicGo/
 https://garymk.cn/tags/zsh/
-https://garymk.cn/tags/Redis/
 https://garymk.cn/tags/%E9%87%91%E8%9E%8D%E5%AD%A6/
+https://garymk.cn/tags/Redis/
 https://garymk.cn/tags/%E6%A1%86%E6%9E%B6/
 https://garymk.cn/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/
 https://garymk.cn/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/
