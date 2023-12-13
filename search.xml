@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MAC设置显示隐藏文件</title>
+      <link href="/2023/12/13/MAC%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/"/>
+      <url>/2023/12/13/MAC%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MAC设置显示隐藏文件"><a href="#MAC设置显示隐藏文件" class="headerlink" title="MAC设置显示隐藏文件"></a>MAC设置显示隐藏文件</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mac显示“隐藏文件”命令：</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></span><br><span class="line"><span class="comment"># Mac隐藏“隐藏文件”命令：</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RN环境配置</title>
       <link href="/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
       <url>/2023/12/11/RN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
@@ -55,6 +74,12 @@
         <content type="html"><![CDATA[<h2 id="Mac系统Python报错"><a href="#Mac系统Python报错" class="headerlink" title="Mac系统Python报错"></a>Mac系统Python报错</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在Mac系统上执行python文件会报错提示权限不够或者找不到文件</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. </span><br><span class="line"><span class="built_in">env</span>: python: No such file or directory</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">bash: /usr/bin/python: Permission denied</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>Mac系统自带的是Python3，直接执行python命令失败</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol><li><p>关闭Mac系统的Rootless机制</p><ol><li><p>arm芯片的mac关机长按启动键进入RecoveryOS</p></li><li><p>点击顶部菜单“实用工具”-》“终端”</p></li><li><p>终端输入命令并重启</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">csrutil <span class="built_in">disable</span></span><br></pre></td></tr></table></figure></li></ol></li><li><p>电脑终端查看python3的位置</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> python3</span><br></pre></td></tr></table></figure></li><li><p>为其创建符号连接</p></li></ol><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s -f /usr/local/bin/python3 /usr/local/bin/python</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -67,6 +92,12 @@
       
         <content type="html"><![CDATA[<h1 id="Mac安装软件“已损坏，无法打开…-”问题"><a href="#Mac安装软件“已损坏，无法打开…-”问题" class="headerlink" title="Mac安装软件“已损坏，无法打开…..”问题"></a>Mac安装软件“已损坏，无法打开…..”问题</h1><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在Mac上安装一些网站软件时候，提示“应用程序”已损坏。您应该将他移到废纸篓。</p><p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/image-20230808160609757.png" alt="image-20230808160609757"></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol><li><p>允许“任何来源”开启</p><p>打开终端，输入：</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure></li></ol><p>​然后打开【系统设置】-【隐私与安全性】下，可以看到安全性那一栏中任何来源已经开启和选中：</p><p><img src="https://garymk-1258635034.cos.ap-beijing.myqcloud.com/typora/image-20230808155803780.png" alt="image-20230808155803780"></p><ol start="2"><li>移除应用的安全隔离属性</li></ol><p>打开【终端】，输入</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo xattr -r -d com.apple.quarantine XXX</span><br></pre></td></tr></table></figure><ul><li>XXX 为当前App的路径，如果不知道路径，打开【Finder】-【应用程序】，找到对应的app，拖到终端中该命令后面即可，例如：</li></ul><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo xattr -r -d com.apple.quarantine /Applications/PicGo.app</span><br></pre></td></tr></table></figure>]]></content>
       
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
       
       
     </entry>
