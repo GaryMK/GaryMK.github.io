@@ -8,7 +8,7 @@
       <link href="/2023/12/13/ProjectA/"/>
       <url>/2023/12/13/ProjectA/</url>
       
-        <content type="html"><![CDATA[<h1 id="ProjectA"><a href="#ProjectA" class="headerlink" title="ProjectA"></a>ProjectA</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="ProjectA"><a href="#ProjectA" class="headerlink" title="ProjectA"></a>ProjectA</h1><details>  <summary>2023年12月13日</summary>  <pre>  <ul>    <ol>创建项目</ol>      <ol>开始微信小程序端及支付宝小程序端开发</ol>    </ul>  </pre></details><details>  <summary>2023年12月14日</summary>  <pre>  <ul>    <ol>完成设计效果图</ol>    </ul>  </pre></details><details>  <summary>2023年12月15日</summary>  <pre>  <ul>    <ol>完成微信小程序、支付宝小程序认证</ol>      <ol>发布小程序测试版本0.9</ol>    </ul>  </pre></details><details>  <summary>1.0.0(2024/)</summary>  <pre>  <h3>  Feature  </h3>  <ul>      <ol>微信小程序</ol>      <ol>支付宝小程序</ol>      <ol>Android</ol>      <ol>iOS</ol>    </ul>    <h3>  Fix  </h3>  <h3>  Improvement  </h3>  </pre></details>]]></content>
       
       
       <categories>
