@@ -55,8 +55,8 @@ https://garymk.cn/tags/Qt%E5%BC%80%E5%8F%91/
 https://garymk.cn/tags/SCI/
 https://garymk.cn/tags/Typora/
 https://garymk.cn/tags/PicGo/
-https://garymk.cn/tags/zsh/
 https://garymk.cn/tags/Redis/
+https://garymk.cn/tags/zsh/
 https://garymk.cn/tags/%E9%87%91%E8%9E%8D%E5%AD%A6/
 https://garymk.cn/tags/%E6%A1%86%E6%9E%B6/
 https://garymk.cn/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/
